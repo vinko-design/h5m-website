@@ -1,5 +1,6 @@
 "use server";
 
+import { render } from "@react-email/render";
 import { Resend } from "resend";
 import { z } from "zod";
 
@@ -69,11 +70,13 @@ export async function joinWaitlist(
     if (resendApiKey && fromEmail) {
       const resend = new Resend(resendApiKey);
 
+      const html = await render(WelcomeEmail({ siteUrl: SITE_URL }));
+
       const { error: emailError } = await resend.emails.send({
         from: fromEmail,
         to: parsed.data.email.toLowerCase().trim(),
         subject: "You're on the list — high five! ✋",
-        react: WelcomeEmail({ siteUrl: SITE_URL }),
+        html,
       });
 
       if (emailError) {
