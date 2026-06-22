@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.highfivemoments.app"
+        }
+      ],
+      "destination": "https://highfivemoments.app/:path*",
+      "permanent": true
+    }
+  ]
+}
