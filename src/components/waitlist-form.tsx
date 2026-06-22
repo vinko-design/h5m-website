@@ -3,7 +3,7 @@
 import { track } from "@vercel/analytics";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useActionState, useEffect, useRef } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 
 import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
 import { Button } from "@/components/ui/button";
@@ -20,6 +20,7 @@ interface WaitlistFormProps {
 export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormProps) {
   const router = useRouter();
   const trackedRef = useRef(false);
+  const [email, setEmail] = useState("");
   const [state, formAction, isPending] = useActionState(joinWaitlist, initialState);
 
   useEffect(() => {
@@ -49,6 +50,8 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
           placeholder="you@example.com"
           required
           aria-required="true"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
           className="h-12 rounded-2xl border-border/60 bg-white px-4 text-base shadow-sm"
         />
       </div>
