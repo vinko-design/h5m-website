@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import { z } from "zod";
 
 import WelcomeEmail from "@/emails/welcome";
-import { SITE_URL } from "@/lib/site-config";
+import { SITE_NAME, SITE_URL } from "@/lib/site-config";
 import { createServiceRoleClient } from "@/lib/supabase/server";
 
 const waitlistSchema = z.object({
@@ -73,7 +73,7 @@ export async function joinWaitlist(
       const html = await render(WelcomeEmail({ siteUrl: SITE_URL }));
 
       const { error: emailError } = await resend.emails.send({
-        from: fromEmail,
+        from: `${SITE_NAME} <${fromEmail}>`,
         to: parsed.data.email.toLowerCase().trim(),
         subject: "You're on the list — high five! ✋",
         html,

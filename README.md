@@ -57,7 +57,7 @@ Full diagram, DNS record tables, API key layout, and checklists:
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Yes | Supabase anon key |
 | `SUPABASE_SERVICE_ROLE_KEY` | Yes | Server-only key for waitlist inserts |
 | `RESEND_API_KEY` | Yes (prod) | Resend **send-only** API key for welcome emails |
-| `RESEND_FROM_EMAIL` | Yes (prod) | Verified sender, e.g. `hello@highfivemoments.app` |
+| `RESEND_FROM_EMAIL` | Yes (prod) | Verified sender address only, e.g. `hello@highfivemoments.app` (display name is added automatically) |
 | `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URL, e.g. `https://highfivemoments.app` |
 
 For Cursor Resend MCP, use a separate full-access key in `.env.resend-mcp` (see [docs/infrastructure.md](./docs/infrastructure.md)).
@@ -81,7 +81,7 @@ After linking to Vercel: `vercel env pull .env.local`
 1. Create an account at [resend.com](https://resend.com).
 2. Add domain `highfivemoments.app` and add DNS records in **Cloudflare** (see [docs/infrastructure.md](./docs/infrastructure.md)).
 3. Create a **send-only** API key → `RESEND_API_KEY` in `.env.local` / Vercel.
-4. Set `RESEND_FROM_EMAIL=hello@highfivemoments.app`.
+4. Set `RESEND_FROM_EMAIL=hello@highfivemoments.app` (address only; emails send as `High Five Moments <hello@...>`).
 5. Test a signup locally once the domain shows **verified** in Resend.
 
 ## Vercel deployment
