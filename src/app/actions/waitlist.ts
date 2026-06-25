@@ -75,7 +75,7 @@ export async function joinWaitlist(
       const { error: emailError } = await resend.emails.send({
         from: `${SITE_NAME} <${fromEmail}>`,
         to: parsed.data.email.toLowerCase().trim(),
-        subject: "You're on the list — high five! ✋",
+        subject: "You're on the list - high five! 🖐️",
         html,
       });
 
