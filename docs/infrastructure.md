@@ -114,14 +114,15 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 - [x] Resend domain created for `highfivemoments.app`
 - [x] Resend DNS records in Cloudflare (DKIM, `send` MX, `send` SPF TXT)
 - [x] Cursor Resend MCP (full-access key in `.env.resend-mcp`)
+- [x] **Cloudflare Email Routing** — domain onboarded, destination verified, `hello@` → Gmail rule
+- [x] Inbound mail test — mail to `hello@highfivemoments.app` arrives in Gmail
 
 ### Still to do
 
 - [ ] **Resend domain verified** — [resend.com/domains](https://resend.com/domains) shows green
-- [ ] **Cloudflare Email Routing** — onboard domain, verify destination inbox, add `hello@` → Gmail rule
 - [ ] **Vercel** — import repo, env vars, add domain, add A/CNAME in Cloudflare
 - [ ] **Gmail “Send mail as”** (optional) — reply from `hello@` from Gmail after routing works
-- [ ] End-to-end test — waitlist signup sends welcome email; mail to `hello@` arrives in Gmail
+- [ ] End-to-end test — waitlist signup sends welcome email on production
 
 ---
 
@@ -130,7 +131,7 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 ### Why three vendors for one domain?
 
 - **Namecheap** — you bought the name there; no need to transfer.
-- **Cloudflare** — free DNS + free inbound email routing; easier than fighting Namecheap’s mail UI.
+- **Cloudflare** — free DNS + free inbound email routing (`hello@` → Gmail); enough for now without a dedicated mailbox provider.
 - **Vercel** — best fit for this Next.js repo.
 - **Resend** — simple API + React Email for welcome messages.
 
@@ -140,7 +141,9 @@ For Vercel, use **DNS only** (grey cloud) on website records. Vercel already pro
 
 ### Custom MX in Namecheap Mail Settings?
 
-That section is for **root-domain incoming mail** (Zoho, Gmail Workspace, etc.). **Do not** put Resend’s MX there. Resend uses Host Records / Cloudflare DNS on the **`send`** subdomain.
+Ignore it once nameservers point to Cloudflare. **Inbound mail uses Cloudflare Email Routing** (root `@` MX records Cloudflare adds when you onboard). **Do not** put Resend’s outbound MX there — Resend only needs DNS on the **`send`** subdomain in Cloudflare.
+
+We do **not** use a third-party mailbox host at the moment (e.g. Zoho Mail or Google Workspace); Cloudflare forwarding to Gmail is enough for early stage. If the app and business grow, a proper mailbox provider would be the likely next step.
 
 ### Where do I change DNS now?
 
