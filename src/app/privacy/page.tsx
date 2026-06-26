@@ -2,16 +2,41 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Footer } from "@/components/footer";
-import { SITE_NAME, SITE_URL } from "@/lib/site-config";
+import {
+  OG_IMAGE_PATH,
+  PRIVACY_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description: PRIVACY_DESCRIPTION,
   alternates: {
     canonical: "/privacy",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    type: "website",
+    url: `${SITE_URL}/privacy`,
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description: PRIVACY_DESCRIPTION,
+    images: [
+      {
+        url: OG_IMAGE_PATH,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description: PRIVACY_DESCRIPTION,
+    images: [OG_IMAGE_PATH],
   },
 };
 
@@ -22,17 +47,16 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold text-[var(--navy)] md:text-4xl">
           Privacy Policy
         </h1>
-        <p className="mt-4 text-muted-foreground">
-          Last updated: June 2025
-        </p>
+        <p className="mt-4 text-muted-foreground">Last updated: June 2026</p>
 
         <div className="prose prose-neutral mt-10 max-w-none space-y-6 text-[var(--navy)]">
           <section>
             <h2 className="text-xl font-semibold">Who we are</h2>
             <p className="mt-2 leading-relaxed text-muted-foreground">
-              {SITE_NAME} ({SITE_URL}) is a couples app for shared goals,
-              calendar planning, and staying aligned. This policy explains how
-              we handle information when you join our waitlist.
+              {SITE_NAME} ({SITE_URL}) is a private app for couples to stay
+              aligned and track shared goals, habits, and milestones. This
+              policy explains how we handle information when you join our
+              waitlist.
             </p>
           </section>
 

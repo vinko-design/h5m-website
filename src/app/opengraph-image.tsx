@@ -1,8 +1,13 @@
 import { ImageResponse } from "next/og";
 
-import { SITE_NAME } from "@/lib/site-config";
+import {
+  OG_IMAGE_ALT,
+  OG_IMAGE_SUBTITLE,
+  OG_IMAGE_TAGLINE,
+  SITE_NAME,
+} from "@/lib/site-config";
 
-export const alt = `${SITE_NAME} — A couples app for shared goals`;
+export const alt = OG_IMAGE_ALT;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -54,7 +59,7 @@ export default function OpenGraphImage() {
             padding: "0 80px",
           }}
         >
-          Shared goals for couples
+          {OG_IMAGE_SUBTITLE}
         </div>
         <div
           style={{
@@ -66,7 +71,7 @@ export default function OpenGraphImage() {
             padding: "0 80px",
           }}
         >
-          Plan, track, and build your future together
+          {OG_IMAGE_TAGLINE}
         </div>
       </div>
     ),

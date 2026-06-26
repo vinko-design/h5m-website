@@ -6,18 +6,10 @@ import { Hero } from "@/components/hero";
 import { UseCases } from "@/components/use-cases";
 import { WhatIsIt } from "@/components/what-is-it";
 import { WaitlistForm } from "@/components/waitlist-form";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} — Shared goals for couples`,
-  description: SITE_DESCRIPTION,
   alternates: {
     canonical: "/",
-  },
-  openGraph: {
-    url: SITE_URL,
-    title: `${SITE_NAME} — Shared goals for couples`,
-    description: SITE_DESCRIPTION,
   },
 };
 

@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 import { SiteHeader } from "@/components/site-header";
 import {
+  OG_DESCRIPTION,
+  OG_IMAGE_ALT,
+  OG_IMAGE_PATH,
+  OG_TITLE,
   SITE_DESCRIPTION,
   SITE_NAME,
+  SITE_TITLE,
   SITE_URL,
 } from "@/lib/site-config";
 
@@ -17,10 +22,14 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#F59E0B",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Shared goals for couples`,
+    default: SITE_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -29,31 +38,29 @@ export const metadata: Metadata = {
       url: "/favicon.svg",
       type: "image/svg+xml",
     },
-  },
-  alternates: {
-    canonical: "/",
+    apple: "/apple-icon",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Shared goals for couples`,
-    description: SITE_DESCRIPTION,
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
     images: [
       {
-        url: "/opengraph-image",
+        url: OG_IMAGE_PATH,
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} — A couples app for shared goals and planning`,
+        alt: OG_IMAGE_ALT,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Shared goals for couples`,
-    description: SITE_DESCRIPTION,
-    images: ["/opengraph-image"],
+    title: OG_TITLE,
+    description: OG_DESCRIPTION,
+    images: [OG_IMAGE_PATH],
   },
 };
 
@@ -61,28 +68,21 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+    },
+    {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: SITE_NAME,
       url: SITE_URL,
-      description: SITE_DESCRIPTION,
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": `${SITE_URL}/#software`,
-      name: SITE_NAME,
-      applicationCategory: "LifestyleApplication",
-      operatingSystem: "iOS, Android",
-      description: SITE_DESCRIPTION,
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        availability: "https://schema.org/PreOrder",
-      },
-      publisher: {
-        "@id": `${SITE_URL}/#organization`,
-      },
+      logo: `${SITE_URL}/favicon.svg`,
     },
   ],
 };
