@@ -41,7 +41,7 @@ export function Hero() {
         </p>
 
         <div className="mx-auto mt-10 flex justify-center">
-          <WaitlistForm id="hero-waitlist" />
+          <WaitlistForm id="hero-waitlist" turnstileReveal="after-fields" />
         </div>
       </div>
     </section>

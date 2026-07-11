@@ -1,79 +1,70 @@
 "use client";
 
-import Script from "next/script";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-declare global {
-  interface Window {
-    turnstile?: {
-      render: (
-        container: HTMLElement,
-        options: {
-          sitekey: string;
-          callback: (token: string) => void;
-          "expired-callback"?: () => void;
-          "error-callback"?: () => void;
-          theme?: "light" | "dark" | "auto";
-        },
-      ) => string;
-      remove: (widgetId: string) => void;
-    };
-    onTurnstileLoad?: () => void;
-  }
-}
+import { useTurnstile } from "@/components/turnstile-provider";
+import { cn } from "@/lib/utils";
 
-interface TurnstileFieldProps {
-  siteKey: string;
-  token: string;
-  onTokenChange: (token: string) => void;
-}
-
-export function TurnstileField({
-  siteKey,
-  token,
-  onTokenChange,
-}: TurnstileFieldProps) {
+export function TurnstileField() {
+  const { token, setToken, siteKey, registerOnReady } = useTurnstile();
   const containerRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
-  const containerId = useId().replace(/:/g, "");
+  const [isWidgetVisible, setIsWidgetVisible] = useState(false);
 
   useEffect(() => {
+    if (!siteKey) {
+      return;
+    }
+
+    const container = containerRef.current;
+    const observer = new MutationObserver(() => {
+      if (container?.firstElementChild) {
+        setIsWidgetVisible(true);
+      }
+    });
+
+    if (container) {
+      observer.observe(container, { childList: true, subtree: true });
+    }
+
     const renderWidget = () => {
-      if (!containerRef.current || !window.turnstile || widgetIdRef.current) {
+      if (!container || !window.turnstile || widgetIdRef.current) {
         return;
       }
 
-      widgetIdRef.current = window.turnstile.render(containerRef.current, {
+      widgetIdRef.current = window.turnstile.render(container, {
         sitekey: siteKey,
-        callback: (nextToken) => onTokenChange(nextToken),
-        "expired-callback": () => onTokenChange(""),
-        "error-callback": () => onTokenChange(""),
+        callback: (nextToken) => setToken(nextToken),
+        "expired-callback": () => setToken(""),
+        "error-callback": () => setToken(""),
         theme: "light",
       });
     };
 
-    window.onTurnstileLoad = renderWidget;
+    const unregister = registerOnReady(renderWidget);
     renderWidget();
 
     return () => {
+      unregister();
+      observer.disconnect();
+
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.remove(widgetIdRef.current);
         widgetIdRef.current = null;
       }
     };
-  }, [onTokenChange, siteKey]);
+  }, [registerOnReady, setToken, siteKey]);
 
   return (
     <>
-      <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad"
-        strategy="afterInteractive"
-      />
       <div
-        id={containerId}
-        ref={containerRef}
-        className="flex min-h-[65px] justify-center"
-      />
+        className={cn(
+          "overflow-hidden transition-[max-height,opacity] duration-200 ease-out",
+          isWidgetVisible ? "max-h-20 opacity-100" : "max-h-0 opacity-0",
+        )}
+      >
+        <div ref={containerRef} className="flex min-h-[65px] justify-center" />
+      </div>
       <input type="hidden" name="turnstileToken" value={token} readOnly />
     </>
   );

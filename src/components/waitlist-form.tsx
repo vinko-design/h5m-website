@@ -7,23 +7,41 @@ import { useActionState, useEffect, useRef, useState } from "react";
 
 import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
 import { TurnstileField } from "@/components/turnstile-field";
+import { useTurnstile } from "@/components/turnstile-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const initialState: WaitlistState = {};
-const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+type TurnstileReveal = "always" | "after-fields";
 
 interface WaitlistFormProps {
   className?: string;
   id?: string;
+  turnstileReveal?: TurnstileReveal;
 }
 
-export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormProps) {
+function isEmailValid(value: string): boolean {
+  const trimmed = value.trim();
+
+  if (!trimmed || trimmed.length > 254) {
+    return false;
+  }
+
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed);
+}
+
+export function WaitlistForm({
+  className,
+  id = "waitlist-form",
+  turnstileReveal = "always",
+}: WaitlistFormProps) {
   const router = useRouter();
   const trackedRef = useRef(false);
+  const { token, siteKey } = useTurnstile();
   const [email, setEmail] = useState("");
-  const [turnstileToken, setTurnstileToken] = useState("");
+  const [consent, setConsent] = useState(false);
   const [state, formAction, isPending] = useActionState(joinWaitlist, initialState);
 
   useEffect(() => {
@@ -34,7 +52,12 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
     }
   }, [state.success, router]);
 
-  const canSubmit = Boolean(turnstileSiteKey && turnstileToken);
+  const fieldsReady = isEmailValid(email) && consent;
+  const showTurnstileWidget =
+    Boolean(siteKey) &&
+    !token &&
+    (turnstileReveal === "always" || fieldsReady);
+  const canSubmit = Boolean(siteKey && token && fieldsReady);
 
   return (
     <form
@@ -84,6 +107,8 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
           type="checkbox"
           required
           aria-required="true"
+          checked={consent}
+          onChange={(event) => setConsent(event.target.checked)}
           className="mt-1 size-4 shrink-0 rounded border-border accent-[var(--indigo)]"
         />
         <label
@@ -100,17 +125,17 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
         </label>
       </div>
 
-      {turnstileSiteKey ? (
-        <TurnstileField
-          siteKey={turnstileSiteKey}
-          token={turnstileToken}
-          onTokenChange={setTurnstileToken}
-        />
-      ) : (
+      {showTurnstileWidget ? <TurnstileField /> : null}
+
+      {token && !showTurnstileWidget ? (
+        <input type="hidden" name="turnstileToken" value={token} readOnly />
+      ) : null}
+
+      {!siteKey ? (
         <p className="text-sm text-destructive" role="alert">
           Waitlist signups are temporarily unavailable.
         </p>
-      )}
+      ) : null}
 
       <Button
         type="submit"

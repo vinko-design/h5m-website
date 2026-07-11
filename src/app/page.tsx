@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
+import { TurnstileProvider } from "@/components/turnstile-provider";
 import { UseCases } from "@/components/use-cases";
 import { WhatIsIt } from "@/components/what-is-it";
 import { WaitlistForm } from "@/components/waitlist-form";
@@ -15,26 +16,28 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
-      <Hero />
-      <WhatIsIt />
-      <Features />
-      <UseCases />
-      <section id="waitlist" className="scroll-mt-20 px-6 py-16 md:py-24">
-        <div className="mx-auto max-w-3xl rounded-3xl bg-white/80 p-8 text-center shadow-sm backdrop-blur-sm md:p-12">
-          <h2 className="text-2xl font-bold text-[var(--navy)] md:text-3xl">
-            Ready to create more high-five moments together?
-          </h2>
-          <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Join the waitlist and be among the first couples building their
-            future with the High Five Moments app.
-          </p>
-          <div className="mx-auto mt-8 flex justify-center">
-            <WaitlistForm id="cta-waitlist" />
+    <TurnstileProvider>
+      <main className="overflow-x-hidden">
+        <Hero />
+        <WhatIsIt />
+        <Features />
+        <UseCases />
+        <section id="waitlist" className="scroll-mt-20 px-6 py-16 md:py-24">
+          <div className="mx-auto max-w-3xl rounded-3xl bg-white/80 p-8 text-center shadow-sm backdrop-blur-sm md:p-12">
+            <h2 className="text-2xl font-bold text-[var(--navy)] md:text-3xl">
+              Ready to create more high-five moments together?
+            </h2>
+            <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
+              Join the waitlist and be among the first couples building their
+              future with the High Five Moments app.
+            </p>
+            <div className="mx-auto mt-8 flex justify-center">
+              <WaitlistForm id="cta-waitlist" />
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </main>
+        </section>
+        <Footer />
+      </main>
+    </TurnstileProvider>
   );
 }
