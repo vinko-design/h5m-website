@@ -29,7 +29,9 @@ export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const showWaitlistCta = pathname !== "/thank-you";
-  const [visible, setVisible] = useState(!isHome);
+  const [heroVisible, setHeroVisible] = useState(isHome);
+
+  const visible = !isHome || !heroVisible;
 
   const handleWaitlistClick = useCallback(() => {
     scrollToWaitlistSection();
@@ -37,7 +39,6 @@ export function SiteHeader() {
 
   useEffect(() => {
     if (!isHome) {
-      setVisible(true);
       return;
     }
 
@@ -48,7 +49,7 @@ export function SiteHeader() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setVisible(!entry.isIntersecting);
+        setHeroVisible(entry.isIntersecting);
       },
       { threshold: 0 },
     );
