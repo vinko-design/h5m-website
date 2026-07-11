@@ -59,6 +59,11 @@ Full diagram, DNS record tables, API key layout, and checklists:
 | `RESEND_API_KEY` | Yes (prod) | Resend **send-only** API key for welcome emails |
 | `RESEND_FROM_EMAIL` | Yes (prod) | Verified sender address only, e.g. `hello@highfivemoments.app` (display name is added automatically) |
 | `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URL, e.g. `https://highfivemoments.app` |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Yes (prod) | Cloudflare Turnstile site key (public) |
+| `TURNSTILE_SECRET_KEY` | Yes (prod) | Cloudflare Turnstile secret key (server-only) |
+| `WAITLIST_PRODUCTION_ENABLED` | Yes (prod only) | Set to `true` on **Production** only — gates Supabase writes and Resend sends |
+| `UNSUBSCRIBE_SECRET` | Recommended | Server-only HMAC secret for unsubscribe links; falls back to service role key |
+| `MAILING_ADDRESS` | Deferred | Physical postal address for welcome email footer (CAN-SPAM). Omit until you have a business or P.O. Box — see [docs/infrastructure.md](./docs/infrastructure.md) checklist |
 
 For Cursor Resend MCP, use a separate full-access key in `.env.resend-mcp` (see [docs/infrastructure.md](./docs/infrastructure.md)).
 
@@ -88,12 +93,17 @@ After linking to Vercel: `vercel env pull .env.local`
 
 1. Push the repo to GitHub.
 2. Import the project in [Vercel](https://vercel.com) (or run `vercel link`).
-3. Add all environment variables for **Production** and **Preview**.
-4. Add `highfivemoments.app` in **Vercel → Project → Settings → Domains**.
-5. Add the A/CNAME records Vercel shows into **Cloudflare DNS** (grey cloud). See [docs/infrastructure.md](./docs/infrastructure.md).
-6. `vercel.json` redirects `www.highfivemoments.app` → `highfivemoments.app` (apex canonical).
-7. **Enable Vercel Analytics** in project settings → Analytics (required for conversion tracking).
-8. Deploy and test a full waitlist signup on production.
+3. Add environment variables:
+   - **Production:** all variables above, including `WAITLIST_PRODUCTION_ENABLED=true`, Turnstile keys, and Resend/Supabase production values.
+   - **Preview:** Turnstile keys and `NEXT_PUBLIC_SITE_URL` only if you need UI testing. Do **not** set `WAITLIST_PRODUCTION_ENABLED` on Preview — signups validate but do not write production data or send email.
+4. **Enable Preview Deployment Protection** in Vercel → Project → Settings → Deployment Protection.
+5. Add `highfivemoments.app` in **Vercel → Project → Settings → Domains**.
+6. Add the A/CNAME records Vercel shows into **Cloudflare DNS** (grey cloud). See [docs/infrastructure.md](./docs/infrastructure.md).
+7. `vercel.json` redirects `www.highfivemoments.app` → `highfivemoments.app` (apex canonical).
+8. **Enable Vercel Analytics** in project settings → Analytics (required for conversion tracking).
+9. Run the Supabase migration in `supabase/migrations/20250626000000_waitlist_security.sql`.
+10. Deploy and test a full waitlist signup on production.
+11. Optional: configure Vercel log alerts for `[waitlist] rate_limit_exceeded` and `[waitlist] resend_send_failed`.
 
 ## Analytics & conversion KPI
 

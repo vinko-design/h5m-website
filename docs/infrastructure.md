@@ -96,7 +96,7 @@ Then create routing rules, e.g. `hello@highfivemoments.app` → your Gmail.
 |-----------------|-----|------------|---------|
 | `.env.local` / Vercel env | `RESEND_API_KEY` | **Send only** | Next.js app (waitlist emails) |
 | `.env.resend-mcp` | `RESEND_API_KEY` | **Full access** | Cursor Resend MCP only — **never** deploy to Vercel |
-| Vercel env | Supabase keys, `RESEND_*`, `NEXT_PUBLIC_SITE_URL` | Per service | Production / preview |
+| Vercel env | Supabase keys, `RESEND_*`, Turnstile keys, `WAITLIST_PRODUCTION_ENABLED`, `NEXT_PUBLIC_SITE_URL` | Per service | Production only for writes/email |
 
 Copy template: `cp .env.example .env.local`
 
@@ -121,8 +121,19 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 
 - [ ] **Resend domain verified** — [resend.com/domains](https://resend.com/domains) shows green
 - [ ] **Vercel** — import repo, env vars, add domain, add A/CNAME in Cloudflare
+- [ ] **Preview Deployment Protection** — enable in Vercel project settings
+- [ ] **Production env separation** — set `WAITLIST_PRODUCTION_ENABLED=true` on Production only; omit on Preview
+- [ ] **Cloudflare Turnstile** — create widget keys for waitlist bot protection
+- [ ] **Supabase migration** — run `supabase/migrations/20250626000000_waitlist_security.sql`
 - [ ] **Gmail “Send mail as”** (optional) — reply from `hello@` from Gmail after routing works
 - [ ] End-to-end test — waitlist signup sends welcome email on production
+- [ ] **`MAILING_ADDRESS` (deferred)** — add when you have a business or P.O. Box address. CAN-SPAM expects a valid physical postal address in marketing-style emails; until then the welcome email footer falls back to `High Five Moments`. Acceptable for pre-launch; set before scaling email volume.
+
+  ```bash
+  npx vercel env add MAILING_ADDRESS production --value "High Five Moments, [street or PO Box], [city, postcode, country]" --yes --sensitive
+  ```
+
+  Then redeploy Production.
 
 ---
 
