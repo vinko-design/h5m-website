@@ -80,7 +80,12 @@ export async function joinWaitlist(
   const rateLimit = await checkAndRecordRateLimits(normalizedEmail, clientIp);
 
   if (!rateLimit.allowed) {
-    return { error: "Too many attempts. Please try again later." };
+    return {
+      error:
+        rateLimit.reason === "limited"
+          ? "Too many attempts. Please try again later."
+          : "Signups are temporarily unavailable. Please try again.",
+    };
   }
 
   try {

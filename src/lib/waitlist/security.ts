@@ -9,7 +9,9 @@ const IP_MAX_ATTEMPTS = 10;
 const EMAIL_WINDOW_MS = 24 * 60 * 60 * 1000;
 const EMAIL_MAX_ATTEMPTS = 5;
 
-type RateLimitResult = { allowed: true } | { allowed: false };
+type RateLimitResult =
+  | { allowed: true }
+  | { allowed: false; reason: "limited" | "unavailable" };
 
 function getUnsubscribeSecret(): string {
   const secret =
@@ -75,41 +77,47 @@ export async function verifyTurnstileToken(
   }
 }
 
-async function countRecentAttempts(
-  bucket: string,
-  windowMs: number,
-): Promise<number> {
+async function getRecentAttempts(
+  ipBucket: string,
+  emailBucket: string,
+) {
   const supabase = createServiceRoleClient();
-  const since = new Date(Date.now() - windowMs).toISOString();
+  const emailSince = new Date(Date.now() - EMAIL_WINDOW_MS).toISOString();
 
-  const { count, error } = await supabase
-    .from("waitlist_rate_limit_events")
-    .select("id", { count: "exact", head: true })
-    .eq("bucket", bucket)
-    .gte("created_at", since);
+  const query = () =>
+    supabase
+      .from("waitlist_rate_limit_events")
+      .select("bucket, created_at")
+      .in("bucket", [ipBucket, emailBucket])
+      .gte("created_at", emailSince);
 
-  if (error) {
+  let result = await query();
+
+  if (result.error) {
+    result = await query();
+  }
+
+  if (result.error) {
     console.error("[waitlist] rate_limit_count_failed", {
-      code: error.code ?? "unknown",
+      code: result.error.code ?? "unknown",
     });
-    return Number.MAX_SAFE_INTEGER;
+    return null;
   }
 
-  return count ?? 0;
-}
+  const ipSince = Date.now() - IP_WINDOW_MS;
+  const attempts = result.data ?? [];
 
-async function recordRateLimitEvent(bucket: string): Promise<void> {
-  const supabase = createServiceRoleClient();
-
-  const { error } = await supabase
-    .from("waitlist_rate_limit_events")
-    .insert({ bucket });
-
-  if (error) {
-    console.error("[waitlist] rate_limit_record_failed", {
-      code: error.code ?? "unknown",
-    });
-  }
+  return {
+    ipCount: attempts.filter(
+      (attempt) =>
+        attempt.bucket === ipBucket &&
+        new Date(attempt.created_at).getTime() >= ipSince,
+    ).length,
+    emailCount: attempts.filter(
+      (attempt) => attempt.bucket === emailBucket,
+    ).length,
+    supabase,
+  };
 }
 
 export async function checkAndRecordRateLimits(
@@ -119,23 +127,32 @@ export async function checkAndRecordRateLimits(
   const ipBucket = `ip:${clientIp}`;
   const emailBucket = `email:${normalizedEmail}`;
 
-  const [ipCount, emailCount] = await Promise.all([
-    countRecentAttempts(ipBucket, IP_WINDOW_MS),
-    countRecentAttempts(emailBucket, EMAIL_WINDOW_MS),
-  ]);
+  const recentAttempts = await getRecentAttempts(ipBucket, emailBucket);
+
+  if (!recentAttempts) {
+    return { allowed: false, reason: "unavailable" };
+  }
+
+  const { ipCount, emailCount, supabase } = recentAttempts;
 
   if (ipCount >= IP_MAX_ATTEMPTS || emailCount >= EMAIL_MAX_ATTEMPTS) {
     console.warn("[waitlist] rate_limit_exceeded", {
       ipLimited: ipCount >= IP_MAX_ATTEMPTS,
       emailLimited: emailCount >= EMAIL_MAX_ATTEMPTS,
     });
-    return { allowed: false };
+    return { allowed: false, reason: "limited" };
   }
 
-  await Promise.all([
-    recordRateLimitEvent(ipBucket),
-    recordRateLimitEvent(emailBucket),
-  ]);
+  const { error } = await supabase
+    .from("waitlist_rate_limit_events")
+    .insert([{ bucket: ipBucket }, { bucket: emailBucket }]);
+
+  if (error) {
+    console.error("[waitlist] rate_limit_record_failed", {
+      code: error.code ?? "unknown",
+    });
+    return { allowed: false, reason: "unavailable" };
+  }
 
   return { allowed: true };
 }
