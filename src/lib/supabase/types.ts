@@ -9,6 +9,24 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
+      waitlist_rate_limit_events: {
+        Row: {
+          id: string;
+          bucket: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          bucket: string;
+          created_at?: string;
+        };
+        Update: {
+          id?: string;
+          bucket?: string;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
       waitlist_signups: {
         Row: {
           id: string;
@@ -17,6 +35,7 @@ export interface Database {
           source: string | null;
           confirmed_at: string | null;
           created_at: string;
+          unsubscribed_at: string | null;
         };
         Insert: {
           id?: string;
@@ -25,6 +44,7 @@ export interface Database {
           source?: string | null;
           confirmed_at?: string | null;
           created_at?: string;
+          unsubscribed_at?: string | null;
         };
         Update: {
           id?: string;
@@ -33,6 +53,7 @@ export interface Database {
           source?: string | null;
           confirmed_at?: string | null;
           created_at?: string;
+          unsubscribed_at?: string | null;
         };
         Relationships: [];
       };
