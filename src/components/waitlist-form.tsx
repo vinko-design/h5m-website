@@ -6,11 +6,13 @@ import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useRef, useState } from "react";
 
 import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
+import { TurnstileField } from "@/components/turnstile-field";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const initialState: WaitlistState = {};
+const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 interface WaitlistFormProps {
   className?: string;
@@ -21,6 +23,7 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
   const router = useRouter();
   const trackedRef = useRef(false);
   const [email, setEmail] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [state, formAction, isPending] = useActionState(joinWaitlist, initialState);
 
   useEffect(() => {
@@ -30,6 +33,8 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
       router.push("/thank-you");
     }
   }, [state.success, router]);
+
+  const canSubmit = Boolean(turnstileSiteKey && turnstileToken);
 
   return (
     <form
@@ -50,6 +55,7 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
           placeholder="you@example.com"
           required
           aria-required="true"
+          maxLength={254}
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           className="h-12 rounded-2xl border-border/60 bg-white px-4 text-base shadow-sm"
@@ -67,6 +73,7 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
           type="text"
           tabIndex={-1}
           autoComplete="off"
+          maxLength={100}
         />
       </div>
 
@@ -93,9 +100,21 @@ export function WaitlistForm({ className, id = "waitlist-form" }: WaitlistFormPr
         </label>
       </div>
 
+      {turnstileSiteKey ? (
+        <TurnstileField
+          siteKey={turnstileSiteKey}
+          token={turnstileToken}
+          onTokenChange={setTurnstileToken}
+        />
+      ) : (
+        <p className="text-sm text-destructive" role="alert">
+          Waitlist signups are temporarily unavailable.
+        </p>
+      )}
+
       <Button
         type="submit"
-        disabled={isPending}
+        disabled={isPending || !canSubmit}
         className="h-12 w-full rounded-2xl bg-[var(--indigo)] text-base font-semibold text-white hover:bg-[var(--indigo)]/90"
       >
         {isPending ? "Joining…" : "Join the waitlist"}
