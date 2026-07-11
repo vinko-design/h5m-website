@@ -20,9 +20,16 @@
 # production
 /build
 
+# cursor — personal agent rules (identity, accounts); not shared with other contributors
+.cursor/rules/git-identity.mdc
+
 # misc
 .DS_Store
 *.pem
+
+# local screenshots (not part of the app)
+/screenshot/
+/screenshots/
 
 # debug
 npm-debug.log*
