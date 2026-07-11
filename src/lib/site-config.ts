@@ -24,6 +24,10 @@ export const OG_IMAGE_TAGLINE =
 export const PRIVACY_DESCRIPTION =
   "How High Five Moments collects, uses, and protects waitlist information.";
 
+export const CONTACT_EMAIL = "hello@highfivemoments.app";
+export const MAILING_ADDRESS =
+  process.env.MAILING_ADDRESS ?? "High Five Moments";
+
 export const FOUNDER_NAME = "Vinko Kraljevic";
 export const FOUNDER_TITLE = "Founder, High Five Moments";
 export const FOUNDER_X_URL = "https://x.com/buildwithvin";

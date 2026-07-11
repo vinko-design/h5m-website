@@ -23,6 +23,9 @@ import { BRAND_INDIGO, LOGO_VIEWBOX } from "@/lib/logo-paths";
 
 interface WelcomeEmailProps {
   siteUrl?: string;
+  unsubscribeUrl: string;
+  mailingAddress: string;
+  contactEmail: string;
 }
 
 const LOGO_HEIGHT = 36;
@@ -32,17 +35,15 @@ const LOGO_WIDTH = Math.round(
 
 export default function WelcomeEmail({
   siteUrl = "https://highfivemoments.app",
+  unsubscribeUrl,
+  mailingAddress,
+  contactEmail,
 }: WelcomeEmailProps) {
   const logoUrl = `${siteUrl}/high-five-moments-logo-email.png`;
 
   return (
     <Html>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@800&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+      <Head />
       <Preview>Thanks for joining the waitlist.</Preview>
       <Body style={main}>
         <Container style={container}>
@@ -96,6 +97,16 @@ export default function WelcomeEmail({
               Follow the journey on X
             </Link>
           </Text>
+
+          <Text style={complianceFooter}>
+            {mailingAddress}
+            <br />
+            {contactEmail}
+            <br />
+            <Link href={unsubscribeUrl} style={footerLink}>
+              Unsubscribe from launch updates
+            </Link>
+          </Text>
         </Container>
       </Body>
     </Html>
@@ -105,7 +116,7 @@ export default function WelcomeEmail({
 const main = {
   backgroundColor: "#FAFAF9",
   fontFamily:
-    '"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
 };
 
 const container = {
@@ -134,7 +145,7 @@ const logo = {
 const brandName = {
   color: BRAND_INDIGO,
   fontFamily:
-    '"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
   fontSize: "18px",
   fontWeight: "800" as const,
   letterSpacing: "-0.02em",
@@ -168,6 +179,14 @@ const signOff = {
 const footer = {
   textAlign: "center" as const,
   margin: "48px 0 0",
+};
+
+const complianceFooter = {
+  color: "#64748B",
+  fontSize: "12px",
+  lineHeight: "1.6",
+  margin: "32px 0 0",
+  textAlign: "center" as const,
 };
 
 const footerLink = {
