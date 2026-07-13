@@ -119,11 +119,15 @@ In the Vercel dashboard → Analytics → filter by custom events to monitor `Wa
 
 ## Google Search Console
 
-After deploying to production:
+After the site is live on production. Full walkthrough and monitoring notes: **[docs/infrastructure.md → Google Search Console](./docs/infrastructure.md#google-search-console)**.
 
-1. Verify `highfivemoments.app` at [Google Search Console](https://search.google.com/search-console).
-2. Submit the sitemap: `https://highfivemoments.app/sitemap.xml`
-3. Monitor indexing, search queries, impressions, and crawl errors over the following weeks.
+Quick reference:
+
+1. Add a **Domain** property for `highfivemoments.app` (not `www` — apex is canonical; `www` redirects).
+2. Verify via **DNS**. If Cloudflare manages the domain, GSC offers a one-click **Cloudflare integration** that adds the TXT record automatically — no manual DNS entry needed.
+3. Submit the sitemap: `https://highfivemoments.app/sitemap.xml`
+4. Optionally use **URL inspection** on `/` and `/privacy` → **Request indexing** to speed up the first crawl.
+5. Reports may show *“Processing data, please check again in a day or so”* for the first 24–48 hours after verification — that is normal for a new property.
 
 ## Project structure
 

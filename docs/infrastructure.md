@@ -139,6 +139,7 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 - [x] **Cloudflare Turnstile** — widget keys for waitlist bot protection
 - [x] **Supabase migration** — `supabase/migrations/20250626000000_waitlist_security.sql` applied
 - [x] End-to-end test — waitlist signup sends welcome email on production
+- [x] **Google Search Console** — Domain property `highfivemoments.app` verified via Cloudflare DNS integration; sitemap submitted
 
 ### Still to do
 
@@ -149,6 +150,45 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
   ```
 
   Then redeploy Production.
+
+---
+
+## Google Search Console
+
+Search Console is how Google reports indexing status, crawl issues, and (once you have traffic) search queries and impressions. It is separate from **Vercel Analytics**, which tracks on-site visits and conversion events.
+
+**Dashboard:** [search.google.com/search-console](https://search.google.com/search-console)
+
+### Setup (verified via Cloudflare)
+
+Use a **Domain** property for `highfivemoments.app` — not a URL-prefix property for `www`. Domain verification covers apex, `www`, and any future subdomains. That matches this project: canonical URL is `https://highfivemoments.app` and `vercel.json` redirects `www` → apex.
+
+1. **Add property** → choose **Domain** → enter `highfivemoments.app`.
+2. **Verify ownership** → choose the **DNS** method.
+3. **Cloudflare integration (recommended):** When GSC detects that DNS is on Cloudflare, it offers to connect your Cloudflare account and add the `google-site-verification` TXT record automatically. Sign in, approve, and verification completes in seconds — no manual record copy/paste in the Cloudflare dashboard.
+4. **Manual DNS fallback:** If the integration is unavailable, copy the TXT value from GSC and add it in **Cloudflare → DNS → Records** (Type `TXT`, Name `@`, DNS only / grey cloud).
+5. **Submit sitemap:** **Indexing → Sitemaps** → enter `https://highfivemoments.app/sitemap.xml` → Submit. The site generates this from `src/app/sitemap.ts`; `robots.txt` already references it.
+6. **Request indexing (optional):** **URL inspection** (top search bar) → enter `https://highfivemoments.app/` → **Request indexing**. Repeat for `/privacy` if desired.
+
+No code changes are required for DNS verification. The site already exposes `/sitemap.xml`, `/robots.txt`, and JSON-LD in `layout.tsx`.
+
+### What to monitor (current UI labels)
+
+Google has renamed some sidebar items. The report you want for “is Google indexing my pages?” is **Indexing → Pages** — the page header reads **Page indexing**. That is the same report; there is no separate “Page indexing” link in the sidebar.
+
+| Sidebar (2025+) | What it shows | When it becomes useful |
+|-----------------|---------------|------------------------|
+| **Overview** | High-level property health | Immediately after verification |
+| **URL inspection** | Status of a single URL; request indexing | Anytime |
+| **Performance** | Clicks, impressions, queries, average position | After Google starts showing the site in search (often weeks) |
+| **Indexing → Pages** | Indexed vs not indexed; reasons pages are excluded | 1–3 days after verification (until then: *“Processing data…”*) |
+| **Indexing → Sitemaps** | Sitemap fetch status, discovered URLs | Within hours of submitting the sitemap |
+| **Experience → Core Web Vitals** | LCP, INP, CLS from field data | After enough real-user Chrome data |
+| **Links** | External links pointing to the site | As backlinks appear |
+
+**Expected on a new site:** **Indexing → Pages** and **Overview** often show *“Processing data, please check again in a day or so”* for the first 24–48 hours. That does not mean setup failed — Google has not finished the first crawl pass yet.
+
+**Not indexed by design:** `/thank-you` is intentionally omitted from the sitemap (post-signup page, not a landing URL).
 
 ---
 
@@ -186,3 +226,4 @@ We do **not** use a third-party mailbox host at the moment (e.g. Zoho Mail or Go
 | Resend domains | [resend.com/domains](https://resend.com/domains) |
 | Vercel project | [vercel.com/dashboard](https://vercel.com/dashboard) |
 | Namecheap renewals | [namecheap.com](https://www.namecheap.com) → Domain List |
+| Google Search Console | [search.google.com/search-console](https://search.google.com/search-console) |
