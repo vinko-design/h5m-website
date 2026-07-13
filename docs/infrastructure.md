@@ -88,6 +88,21 @@ Then create routing rules, e.g. `hello@highfivemoments.app` → your Gmail.
 
 **Resend (send subdomain) and Cloudflare Routing (root @) do not conflict** — different hostnames, different jobs.
 
+### Two ways email leaves `hello@highfivemoments.app`
+
+These are separate systems. Do not mix them up.
+
+| Path | Who sends | Used for |
+|------|-----------|----------|
+| **Resend** | The website (server action → Resend API) | Automated waitlist welcome emails |
+| **Gmail “Send mail as”** | You, manually in Gmail | Replies to people who emailed `hello@` |
+
+**Resend** has nothing to do with your Gmail inbox. The site never sends mail through Gmail.
+
+**Gmail “Send mail as”** is an optional Gmail setting (*Settings → See all settings → Accounts → Send mail as*) so that when someone emails `hello@` (forwarded to your Gmail by Cloudflare) and you hit Reply, the recipient sees `hello@highfivemoments.app` — not your personal `@gmail.com` address.
+
+Cloudflare Email Routing only handles **receiving** and forwarding inbound mail. It does not make Gmail send outbound mail as `hello@` automatically. If you can already compose/reply as `hello@` in Gmail, this step is done.
+
 ---
 
 ## API keys & local env files
@@ -106,27 +121,27 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 
 ## Setup checklist
 
-### Done (as of initial setup)
+### Done
 
 - [x] Domain registered at Namecheap
 - [x] Cloudflare connected (**Connect a domain**, not transfer)
 - [x] Nameservers at Namecheap → Cloudflare (`cameron.ns.cloudflare.com`, `heather.ns.cloudflare.com`)
 - [x] Resend domain created for `highfivemoments.app`
 - [x] Resend DNS records in Cloudflare (DKIM, `send` MX, `send` SPF TXT)
+- [x] **Resend domain verified** — [resend.com/domains](https://resend.com/domains) shows green
 - [x] Cursor Resend MCP (full-access key in `.env.resend-mcp`)
 - [x] **Cloudflare Email Routing** — domain onboarded, destination verified, `hello@` → Gmail rule
 - [x] Inbound mail test — mail to `hello@highfivemoments.app` arrives in Gmail
+- [x] **Gmail “Send mail as”** — reply from `hello@` in Gmail (optional personal setup; not Resend)
+- [x] **Vercel** — repo imported, env vars, domain, A/CNAME in Cloudflare
+- [x] **Preview Deployment Protection** — enabled in Vercel project settings
+- [x] **Production env separation** — `WAITLIST_PRODUCTION_ENABLED=true` on Production only; omitted on Preview
+- [x] **Cloudflare Turnstile** — widget keys for waitlist bot protection
+- [x] **Supabase migration** — `supabase/migrations/20250626000000_waitlist_security.sql` applied
+- [x] End-to-end test — waitlist signup sends welcome email on production
 
 ### Still to do
 
-- [ ] **Resend domain verified** — [resend.com/domains](https://resend.com/domains) shows green
-- [ ] **Vercel** — import repo, env vars, add domain, add A/CNAME in Cloudflare
-- [ ] **Preview Deployment Protection** — enable in Vercel project settings
-- [ ] **Production env separation** — set `WAITLIST_PRODUCTION_ENABLED=true` on Production only; omit on Preview
-- [ ] **Cloudflare Turnstile** — create widget keys for waitlist bot protection
-- [ ] **Supabase migration** — run `supabase/migrations/20250626000000_waitlist_security.sql`
-- [ ] **Gmail “Send mail as”** (optional) — reply from `hello@` from Gmail after routing works
-- [ ] End-to-end test — waitlist signup sends welcome email on production
 - [ ] **`MAILING_ADDRESS` (deferred)** — add when you have a business or P.O. Box address. CAN-SPAM expects a valid physical postal address in marketing-style emails; until then the welcome email footer falls back to `High Five Moments`. Acceptable for pre-launch; set before scaling email volume.
 
   ```bash
