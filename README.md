@@ -99,7 +99,7 @@ After linking to Vercel: `vercel env pull .env.local`
 4. **Enable Preview Deployment Protection** in Vercel → Project → Settings → Deployment Protection.
 5. Add `highfivemoments.app` in **Vercel → Project → Settings → Domains**.
 6. Add the A/CNAME records Vercel shows into **Cloudflare DNS** (grey cloud). See [docs/infrastructure.md](./docs/infrastructure.md).
-7. `vercel.json` redirects `www.highfivemoments.app` → `highfivemoments.app` (apex canonical).
+7. `next.config.ts` redirects `www.highfivemoments.app` → `highfivemoments.app` (apex canonical).
 8. **Enable Vercel Analytics** in project settings → Analytics (required for conversion tracking).
 9. Run the Supabase migration in `supabase/migrations/20250626000000_waitlist_security.sql`.
 10. Deploy and test a full waitlist signup on production.

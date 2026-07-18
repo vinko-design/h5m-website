@@ -60,7 +60,7 @@ Add these after connecting the domain in **Vercel → Project → Settings → D
 | A | `@` | `76.76.21.21` | Apex domain → Vercel |
 | CNAME | `www` | `cname.vercel-dns.com` | www → Vercel |
 
-`vercel.json` redirects `www` → apex. Canonical URL: `https://highfivemoments.app`.
+`next.config.ts` redirects `www` → apex. Canonical URL: `https://highfivemoments.app`.
 
 ### Outbound email → Resend (sending)
 
@@ -161,7 +161,7 @@ Search Console is how Google reports indexing status, crawl issues, and (once yo
 
 ### Setup (verified via Cloudflare)
 
-Use a **Domain** property for `highfivemoments.app` — not a URL-prefix property for `www`. Domain verification covers apex, `www`, and any future subdomains. That matches this project: canonical URL is `https://highfivemoments.app` and `vercel.json` redirects `www` → apex.
+Use a **Domain** property for `highfivemoments.app` — not a URL-prefix property for `www`. Domain verification covers apex, `www`, and any future subdomains. That matches this project: canonical URL is `https://highfivemoments.app` and `next.config.ts` redirects `www` → apex.
 
 1. **Add property** → choose **Domain** → enter `highfivemoments.app`.
 2. **Verify ownership** → choose the **DNS** method.
