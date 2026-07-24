@@ -14,7 +14,8 @@ export const OG_TITLE =
 export const OG_DESCRIPTION =
   "Track meaningful moments, shared goals, habits, milestones, and progress with your partner in one private space.";
 
-export const OG_IMAGE_PATH = "/opengraph-image";
+// Bump the query when the artwork changes so social crawlers fetch a fresh image.
+export const OG_IMAGE_PATH = "/opengraph-image?v=2";
 export const OG_IMAGE_ALT =
   "High Five Moments — Shared goals and progress for couples";
 export const OG_IMAGE_SUBTITLE = "Shared goals and progress for couples";

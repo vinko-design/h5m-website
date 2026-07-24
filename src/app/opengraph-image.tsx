@@ -1,6 +1,11 @@
 import { ImageResponse } from "next/og";
 
 import {
+  LOGO_COLORS,
+  LOGO_PATHS,
+  LOGO_VIEWBOX,
+} from "@/lib/logo-paths";
+import {
   OG_IMAGE_ALT,
   OG_IMAGE_SUBTITLE,
   OG_IMAGE_TAGLINE,
@@ -12,6 +17,10 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpenGraphImage() {
+  const colors = LOGO_COLORS.standard;
+  const logoHeight = 120;
+  const logoWidth = (LOGO_VIEWBOX.width / LOGO_VIEWBOX.height) * logoHeight;
+
   return new ImageResponse(
     (
       <div
@@ -40,15 +49,30 @@ export default function OpenGraphImage() {
         />
         <div
           style={{
-            fontSize: 72,
-            fontWeight: 700,
-            color: "#FAFAF9",
-            letterSpacing: "-0.02em",
-            textAlign: "center",
-            padding: "0 80px",
+            display: "flex",
+            alignItems: "center",
+            gap: 28,
           }}
         >
-          {SITE_NAME}
+          <svg
+            viewBox={`0 0 ${LOGO_VIEWBOX.width} ${LOGO_VIEWBOX.height}`}
+            width={logoWidth}
+            height={logoHeight}
+            style={{ display: "block" }}
+          >
+            <path d={LOGO_PATHS.hand} fill={colors.hand} />
+            <path d={LOGO_PATHS.heart} fill={colors.heart} />
+          </svg>
+          <div
+            style={{
+              fontSize: 72,
+              fontWeight: 700,
+              color: "#FAFAF9",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            {SITE_NAME}
+          </div>
         </div>
         <div
           style={{
