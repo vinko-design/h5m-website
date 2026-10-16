@@ -12,3 +12,4 @@ Before making assumptions about product definition, audience, positioning, messa
 - This repository remains authoritative for published website copy, metadata, and implementation.
 - Report conflicts explicitly; do not silently resolve them from convenience.
 - Shared context may be unavailable when this repository is opened alone — say so instead of inferring.
+- If this discussion reveals follow-up that is not the current task, append one short unreviewed entry to [../h5m-context/backlog/inbox.md](../h5m-context/backlog/inbox.md) — title, date, while, likely owner, source, note — then return to the task. Do not open `later.md`, `done.md`, or the rules file, and do not prioritize or start it.
