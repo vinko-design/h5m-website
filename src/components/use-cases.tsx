@@ -17,9 +17,9 @@ import {
 const useCases = [
   {
     icon: Heart,
-    title: "Relationship habits",
+    title: "Everyday moments",
     description:
-      "Track the small things that shape your relationship over time.",
+      "Notice the small things that shape your relationship over time.",
   },
   {
     icon: Target,
@@ -30,12 +30,12 @@ const useCases = [
   {
     icon: Handshake,
     title: "Shared commitments",
-    description: "Stay aligned on what matters most.",
+    description: "What you both agreed to, kept where you can talk about it.",
   },
   {
     icon: TrendingUp,
-    title: "Building better routines",
-    description: "Create habits that support the life you're trying to build.",
+    title: "The life you're building",
+    description: "See whether the day-to-day is adding up to it.",
   },
   {
     icon: MessageCircle,
@@ -61,12 +61,12 @@ export function UseCases() {
             id="use-cases-heading"
             className="text-3xl font-bold tracking-tight text-[var(--navy)] md:text-4xl"
           >
-            What couples use High Five Moments for
+            What High Five Moments is for
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            From everyday habits to meaningful milestones, High Five Moments
-            helps couples notice progress, stay aligned, and celebrate wins
-            both big and small.
+            From everyday moments to shared goals, High Five Moments helps
+            couples notice progress, stay aligned, and celebrate wins both big
+            and small.
           </p>
         </div>
 

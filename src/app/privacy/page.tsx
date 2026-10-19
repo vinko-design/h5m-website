@@ -53,10 +53,10 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-semibold">Who we are</h2>
             <p className="mt-2 leading-relaxed text-muted-foreground">
-              {SITE_NAME} ({SITE_URL}) is a private app for couples to stay
-              aligned and track shared goals, habits, and milestones. This
-              policy explains how we handle information when you join our
-              waitlist.
+              {SITE_NAME} ({SITE_URL}) is a shared place for couples to stay
+              aligned, support each other&apos;s growth, and create more
+              high-five moments. This policy explains how we handle
+              information when you join our waitlist.
             </p>
           </section>
 

@@ -1,6 +1,6 @@
 # High Five Moments — Waitlist Website
 
-A Next.js waitlist site for **High Five Moments**, a couples app for shared goals, calendar planning, and staying aligned.
+A Next.js waitlist site for **High Five Moments**, a shared place where couples stay aligned, support each other's growth, and create more high-five moments.
 
 ## Tech stack
 

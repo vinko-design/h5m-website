@@ -16,15 +16,15 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Track progress in seconds",
+    title: "Keep coming back",
     description:
-      "Quick updates, shared visibility, and no spreadsheet chaos.",
+      "Notice how reality compares with what you're striving for, then talk, adapt, and try again.",
   },
   {
     icon: LineChart,
-    title: "See your journey together",
+    title: "Celebrate the journey",
     description:
-      "Spot patterns, celebrate wins, and create more high-five moments over time.",
+      "Create more high-five moments for the wins, big and small.",
   },
 ];
 
