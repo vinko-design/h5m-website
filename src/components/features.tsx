@@ -1,4 +1,4 @@
-import { LayoutGrid, LineChart, Zap } from "lucide-react";
+import { Hand, RefreshCw, Users } from "lucide-react";
 
 import {
   Card,
@@ -9,19 +9,19 @@ import {
 
 const features = [
   {
-    icon: LayoutGrid,
+    icon: Users,
     title: "Create a shared space",
     description:
       "Bring everything that matters into one place and support each other's goals.",
   },
   {
-    icon: Zap,
+    icon: RefreshCw,
     title: "Keep coming back",
     description:
       "Notice how reality compares with what you're striving for, then talk, adapt, and try again.",
   },
   {
-    icon: LineChart,
+    icon: Hand,
     title: "Celebrate the journey",
     description:
       "Create more high-five moments for the wins, big and small.",

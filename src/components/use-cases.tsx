@@ -1,10 +1,10 @@
 import {
-  Heart,
+  Blocks,
+  Flag,
   Handshake,
   MessageCircle,
   PartyPopper,
-  Target,
-  TrendingUp,
+  Sun,
 } from "lucide-react";
 
 import {
@@ -16,13 +16,13 @@ import {
 
 const useCases = [
   {
-    icon: Heart,
+    icon: Sun,
     title: "Everyday moments",
     description:
       "Notice the small things that shape your relationship over time.",
   },
   {
-    icon: Target,
+    icon: Flag,
     title: "Personal ambitions",
     description:
       "Support each other's goals and make steady progress together.",
@@ -33,7 +33,7 @@ const useCases = [
     description: "What you both agreed to, kept where you can talk about it.",
   },
   {
-    icon: TrendingUp,
+    icon: Blocks,
     title: "The life you're building",
     description: "See whether the day-to-day is adding up to it.",
   },
