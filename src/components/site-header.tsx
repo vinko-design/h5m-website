@@ -12,6 +12,10 @@ import { BrandLogo } from "./brand-logo";
 const WAITLIST_SECTION_ID = "waitlist";
 const WAITLIST_EMAIL_INPUT_ID = "cta-waitlist-email";
 
+function pageScrollsToWaitlist(pathname: string): boolean {
+  return pathname === "/" || pathname.startsWith("/blog/");
+}
+
 function scrollToWaitlistSection() {
   const target = document.getElementById(WAITLIST_SECTION_ID);
   if (!target) {
@@ -28,6 +32,7 @@ function scrollToWaitlistSection() {
 export function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const scrollsToWaitlist = pageScrollsToWaitlist(pathname);
   const showWaitlistCta = pathname !== "/thank-you";
   const [heroVisible, setHeroVisible] = useState(isHome);
 
@@ -59,14 +64,14 @@ export function SiteHeader() {
   }, [isHome]);
 
   useEffect(() => {
-    if (!isHome || window.location.hash !== `#${WAITLIST_SECTION_ID}`) {
+    if (!scrollsToWaitlist || window.location.hash !== `#${WAITLIST_SECTION_ID}`) {
       return;
     }
 
     requestAnimationFrame(() => {
       scrollToWaitlistSection();
     });
-  }, [isHome]);
+  }, [scrollsToWaitlist]);
 
   return (
     <header
@@ -87,7 +92,7 @@ export function SiteHeader() {
         </Link>
 
         {showWaitlistCta ? (
-          isHome ? (
+          scrollsToWaitlist ? (
             <Button
               type="button"
               onClick={handleWaitlistClick}

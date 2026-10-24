@@ -1,10 +1,12 @@
 import Link from "next/link";
 
 import { BrandLogo } from "@/components/brand-logo";
+import { getPublishedArticles } from "@/lib/articles";
 import { SITE_NAME } from "@/lib/site-config";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const hasArticles = getPublishedArticles().length > 0;
 
   return (
     <footer className="border-t border-border/50 px-6 py-10">
@@ -21,7 +23,15 @@ export function Footer() {
         <p className="text-sm text-muted-foreground">
           © {year} {SITE_NAME}. highfivemoments.app
         </p>
-        <nav aria-label="Footer">
+        <nav aria-label="Footer" className="flex items-center gap-4">
+          {hasArticles ? (
+            <Link
+              href="/blog"
+              className="text-sm text-muted-foreground underline-offset-2 hover:text-[var(--navy)] hover:underline"
+            >
+              Articles
+            </Link>
+          ) : null}
           <Link
             href="/privacy"
             className="text-sm text-muted-foreground underline-offset-2 hover:text-[var(--navy)] hover:underline"
