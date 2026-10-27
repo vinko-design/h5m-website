@@ -38,6 +38,7 @@ const frontmatterSchema = z.object({
   publishedAt: isoDateSchema,
   updatedAt: isoDateSchema,
   published: z.boolean(),
+  payoffList: z.boolean().optional(),
   hero: heroSchema.optional(),
 });
 
@@ -48,6 +49,7 @@ export type Article = {
   heading: string;
   publishedAt: string;
   updatedAt: string;
+  payoffList: boolean;
   hero: {
     src: string;
     alt: string;
@@ -172,6 +174,7 @@ function loadArticle(fileName: string): LoadedArticle {
       heading: data.heading,
       publishedAt: data.publishedAt,
       updatedAt: data.updatedAt,
+      payoffList: data.payoffList ?? false,
       hero: {
         src: data.hero.src,
         alt: data.hero.alt,

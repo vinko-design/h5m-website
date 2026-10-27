@@ -15,7 +15,7 @@ The site renders markdown from this repo. There is no CMS. One layout supplies t
 
 The slug is the filename without `.md`. Use the primary keyword, lowercase, with hyphens. `relationship-check-in.md` is served at `/blog/relationship-check-in`. Leave the slug alone after the page is published.
 
-`published: true` puts the article on the index, in the sitemap, and on a public URL. Any other value is ignored by those surfaces. With zero published articles, `/blog` stays out of the sitemap and is marked `noindex`. The footer link labeled Articles appears once a published article exists.
+`published: true` puts the article on the index, in the sitemap, and on a public URL. Any other value is ignored by those surfaces. With zero published articles, `/blog` stays out of the sitemap and is marked `noindex`. The footer link labeled Blog appears once a published article exists.
 
 ## Frontmatter
 
@@ -40,7 +40,25 @@ hero:
 - `hero.src` is `/blog/<slug>/<slug>.webp`.
 - `hero.alt` describes what is in the picture.
 
-The markdown body starts at the first H2. The layout renders the H1, so the file has no `#` heading. The body keeps its own closing waitlist line. The layout does not add another one.
+The markdown body starts at the first H2. The layout renders the H1, so the file has no `#` heading. The layout renders a join section under the article. A closing sentence in the body may point at that section. It says the reader can join the waitlist below, and it does not link to `/`.
+
+`payoffList: true` styles the article's one ordered list. A simple list of short items is the usual case. When the page explains each item, a headed list is an option: the card image comes first, then each item is a heading with its paragraph indented under it, so the questions are not printed twice. The questions stay real text.
+
+```md
+![Alt text.](/blog/<slug>/check-in-questions.webp)
+
+1. ### First question?
+
+   The paragraph about it.
+```
+
+Draw the image with:
+
+```sh
+node scripts/render-question-card.mjs content/articles/<slug>.md
+```
+
+The script reads the item headings, or the item text when there is no heading. It draws a simple on-brand SVG and writes `public/blog/<slug>/check-in-questions.webp`. The card has no border. The page draws that in CSS, on this image only. A gold line sits in the footer, inside the margins, runs above the wordmark, and stops short of the hand. The hand sits on the right. The words High Five Moments sit just to its left, under the line, in DM Sans ExtraBold and indigo. The approved example sits with that article’s hero: `public/blog/relationship-check-in/check-in-questions.webp`. The markdown image uses that file and an alt. An image model does not draw this card.
 
 A build fails when a published article is missing its hero, the hero is the wrong size, a body image has no alt text, or a body image sits outside `public/blog/<slug>/`.
 
@@ -63,11 +81,11 @@ Picture rules live in the SEO site config: photographs stay naturalistic, graphi
 For a published article the layout sets:
 
 - Title from `title`, description, and canonical `/blog/<slug>`
-- Open Graph `article`, with the published and updated dates, and the hero as the image
+- Open Graph `article`, with the published and updated dates, the author High Five Moments, and the hero as the image
 - A Twitter large image card
-- A byline with the date and Vinko Kraljevic
-- Visible breadcrumbs: Home / Articles / heading
-- `BlogPosting` and `BreadcrumbList` structured data, tied to the site organization
+- A byline with the date and High Five Moments
+- Visible breadcrumbs: Home / Blog / heading
+- `BlogPosting` author is the High Five Moments organization at the site URL. `BreadcrumbList` stays tied to the site organization
 - A sitemap entry with `lastModified` from `updatedAt`, monthly change frequency, and priority `0.7`
 
 `/blog` lists published articles, newest first. Once that list has an article, the index is included in the sitemap.

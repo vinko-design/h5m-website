@@ -29,7 +29,12 @@ const components: Components = {
     }
 
     return (
-      <a href={href} className={className}>
+      <a
+        href={href}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
       </a>
     );
@@ -68,7 +73,12 @@ const components: Components = {
         width={size.width}
         height={size.height}
         sizes="(min-width: 768px) 768px, 100vw"
-        className="mt-6 h-auto w-full rounded-2xl"
+        unoptimized
+        className={
+          src.endsWith("/check-in-questions.webp")
+            ? "mt-6 h-auto w-full rounded-2xl ring-1 ring-[var(--indigo)]/20"
+            : "mt-6 h-auto w-full rounded-2xl"
+        }
       />
     );
   },
@@ -105,10 +115,31 @@ const components: Components = {
   ),
 };
 
-export function ArticleBody({ markdown }: { markdown: string }) {
+const questionListComponents: Components = {
+  ...components,
+  ol: ({ children }) => (
+    <ol className="mt-6 list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[var(--indigo)]">
+      {children}
+    </ol>
+  ),
+  li: ({ children }) => (
+    <li className="pl-2 leading-relaxed [&>h3]:mt-6 [&_p]:mt-2">{children}</li>
+  ),
+};
+
+export function ArticleBody({
+  markdown,
+  payoffList = false,
+}: {
+  markdown: string;
+  payoffList?: boolean;
+}) {
   return (
     <div className="mt-10">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={payoffList ? questionListComponents : components}
+      >
         {markdown}
       </ReactMarkdown>
     </div>
