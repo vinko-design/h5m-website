@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -65,7 +66,7 @@ export default function BlogIndexPage() {
             {
               "@type": "ListItem",
               position: 2,
-              name: "Articles",
+              name: BLOG_TITLE,
               item: `${SITE_URL}/blog`,
             },
           ],
@@ -82,38 +83,55 @@ export default function BlogIndexPage() {
           }}
         />
       ) : null}
-      <div className="mx-auto w-full max-w-3xl flex-1 px-6 pb-16 pt-24 md:pt-28">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Articles" }]} />
+      <div className="mx-auto w-full max-w-5xl flex-1 px-6 pb-16 pt-24 md:pt-28">
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: BLOG_TITLE }]} />
         <h1 className="mt-6 text-3xl font-bold text-[var(--navy)] md:text-4xl">
           {BLOG_TITLE}
         </h1>
         {articles.length > 0 ? (
           <>
-            <p className="mt-4 leading-relaxed text-muted-foreground">
+            <p className="mt-6 leading-relaxed text-muted-foreground">
               {BLOG_DESCRIPTION}
             </p>
-            <ul className="mt-10">
+            <ul className="mt-9 flex flex-col gap-6">
               {articles.map((article) => (
                 <li
                   key={article.slug}
-                  className="border-t border-border/70 py-8 first:border-t-0 first:pt-0"
+                  className="rounded-3xl border border-border/50 bg-white/50 p-6 shadow-sm backdrop-blur-sm"
                 >
-                  <h2 className="text-2xl font-semibold">
+                  <div className="flex flex-col gap-5 md:flex-row md:items-start md:gap-8">
                     <Link
                       href={`/blog/${article.slug}`}
-                      className="text-[var(--navy)] underline-offset-2 hover:underline"
+                      className="block shrink-0 md:w-72"
                     >
-                      {article.heading}
+                      <Image
+                        src={article.hero.src}
+                        alt={article.hero.alt}
+                        width={article.hero.width}
+                        height={article.hero.height}
+                        sizes="(min-width: 768px) 288px, 100vw"
+                        className="aspect-video w-full rounded-2xl object-cover"
+                      />
                     </Link>
-                  </h2>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    <time dateTime={article.publishedAt}>
-                      {formatArticleDate(article.publishedAt)}
-                    </time>
-                  </p>
-                  <p className="mt-3 leading-relaxed text-muted-foreground">
-                    {article.description}
-                  </p>
+                    <div className="min-w-0 flex-1">
+                      <h2 className="text-2xl font-semibold">
+                        <Link
+                          href={`/blog/${article.slug}`}
+                          className="text-[var(--navy)] underline-offset-2 hover:underline"
+                        >
+                          {article.heading}
+                        </Link>
+                      </h2>
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        <time dateTime={article.publishedAt}>
+                          {formatArticleDate(article.publishedAt)}
+                        </time>
+                      </p>
+                      <p className="mt-5 leading-relaxed text-muted-foreground">
+                        {article.description}
+                      </p>
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>

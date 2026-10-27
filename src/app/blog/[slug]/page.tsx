@@ -12,13 +12,7 @@ import {
   getPublishedArticle,
   getPublishedArticles,
 } from "@/lib/articles";
-import {
-  FOUNDER_NAME,
-  FOUNDER_TITLE,
-  FOUNDER_X_URL,
-  SITE_NAME,
-  SITE_URL,
-} from "@/lib/site-config";
+import { BLOG_TITLE, SITE_NAME, SITE_URL } from "@/lib/site-config";
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -66,7 +60,7 @@ export async function generateMetadata({
       description: article.description,
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt,
-      authors: [FOUNDER_NAME],
+      authors: [SITE_NAME],
       images: [image],
     },
     twitter: {
@@ -98,11 +92,9 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         datePublished: article.publishedAt,
         dateModified: article.updatedAt,
         author: {
-          "@type": "Person",
-          name: FOUNDER_NAME,
-          jobTitle: FOUNDER_TITLE,
+          "@type": "Organization",
+          name: SITE_NAME,
           url: SITE_URL,
-          sameAs: [FOUNDER_X_URL],
         },
         publisher: {
           "@id": `${SITE_URL}/#organization`,
@@ -119,13 +111,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {
             "@type": "ListItem",
             position: 1,
-name: "Home",
-              item: SITE_URL,
+            name: "Home",
+            item: SITE_URL,
           },
           {
             "@type": "ListItem",
             position: 2,
-            name: "Articles",
+            name: BLOG_TITLE,
             item: `${SITE_URL}/blog`,
           },
           {
@@ -152,7 +144,7 @@ name: "Home",
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
-              { label: "Articles", href: "/blog" },
+              { label: BLOG_TITLE, href: "/blog" },
               { label: article.heading },
             ]}
           />
@@ -172,7 +164,7 @@ name: "Home",
               </>
             ) : null}
             <span aria-hidden="true"> · </span>
-            {FOUNDER_NAME}
+            {SITE_NAME}
           </p>
           <Image
             src={article.hero.src}
@@ -183,7 +175,7 @@ name: "Home",
             sizes="(min-width: 768px) 768px, 100vw"
             className="mt-8 h-auto w-full rounded-2xl"
           />
-          <ArticleBody markdown={article.body} />
+          <ArticleBody markdown={article.body} payoffList={article.payoffList} />
         </article>
         <WaitlistCta />
         <Footer />

@@ -11,7 +11,8 @@ const sizes = {
   },
   header: {
     icon: 36,
-    text: "text-lg sm:text-xl",
+    iconMobile: 40,
+    text: "text-xl leading-[1.12] md:text-xl md:leading-normal",
     gap: "gap-2.5",
   },
   footer: {
@@ -42,7 +43,14 @@ export function BrandLogo({
         className,
       )}
     >
-      <LogoMark size={config.icon} />
+      {"iconMobile" in config && config.iconMobile ? (
+        <>
+          <LogoMark size={config.iconMobile} className="md:hidden" />
+          <LogoMark size={config.icon} className="hidden md:block" />
+        </>
+      ) : (
+        <LogoMark size={config.icon} />
+      )}
       {showText ? (
         <span
           className={cn(

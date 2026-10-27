@@ -25,7 +25,7 @@ export const OG_IMAGE_TAGLINE =
 export const PRIVACY_DESCRIPTION =
   "How High Five Moments collects, uses, and protects waitlist information.";
 
-export const BLOG_TITLE = "Articles";
+export const BLOG_TITLE = "Blog";
 export const BLOG_DESCRIPTION =
   "Short articles for couples on staying aligned, talking about how the days went, and noticing the moments worth a high five.";
 

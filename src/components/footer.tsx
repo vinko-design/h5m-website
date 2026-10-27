@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { BrandLogo } from "@/components/brand-logo";
 import { getPublishedArticles } from "@/lib/articles";
-import { SITE_NAME } from "@/lib/site-config";
+import { BLOG_TITLE, SITE_NAME } from "@/lib/site-config";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -29,7 +29,7 @@ export function Footer() {
               href="/blog"
               className="text-sm text-muted-foreground underline-offset-2 hover:text-[var(--navy)] hover:underline"
             >
-              Articles
+              {BLOG_TITLE}
             </Link>
           ) : null}
           <Link
