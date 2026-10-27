@@ -80,6 +80,7 @@ After linking to Vercel: `vercel env pull .env.local`
 
 3. Copy your project URL, anon key, and service role key into `.env.local` / Vercel env vars.
 4. View signups in the Supabase dashboard → Table Editor → `waitlist_signups`.
+5. **Free tier:** add GitHub Actions secrets `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` so the scheduled keep-alive workflow can prevent inactivity pausing — see [docs/infrastructure.md](./docs/infrastructure.md#supabase-keep-alive-free-tier).
 
 ## Resend setup
 

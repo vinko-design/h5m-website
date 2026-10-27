@@ -151,6 +151,40 @@ MCP config: `.cursor/mcp.json` runs `scripts/run-resend-mcp.sh`, which loads `.e
 
   Then redeploy Production.
 
+- [ ] **Supabase keep-alive (GitHub Actions)** — after merging `.github/workflows/supabase-keepalive.yml`, add repository secrets (see below) and run the workflow once manually to confirm green.
+
+---
+
+## Supabase keep-alive (free tier)
+
+Supabase may **pause** free projects after about a week of low **database** activity. This repo includes a scheduled GitHub Actions workflow that runs a tiny read against `waitlist_signups` twice per day so the project stays active without upgrading to Pro.
+
+**Workflow file:** `.github/workflows/supabase-keepalive.yml`  
+**Schedule:** 08:00 and 20:00 UTC daily (plus manual runs). Scheduled workflows only run on the repository’s **default branch** (usually `main`).
+
+### One-time: GitHub repository secrets
+
+In **[GitHub → your repo → Settings → Secrets and variables → Actions](https://github.com/vinko-design/h5m-website/settings/secrets/actions)** → **New repository secret**, add:
+
+| Secret name | Value |
+|-------------|--------|
+| `SUPABASE_URL` | Same as `NEXT_PUBLIC_SUPABASE_URL` in Vercel (e.g. `https://xxxxx.supabase.co`) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Same as `SUPABASE_SERVICE_ROLE_KEY` in Vercel **Production** |
+
+Copy from **Supabase → Project Settings → API**, or from Vercel → Project → Settings → Environment Variables (Production).
+
+The **service role** key bypasses RLS and must stay server-side only. GitHub Actions secrets are not exposed to the website or PR forks (workflows from forks do not get your secrets).
+
+The **anon** key is not used for this workflow — waitlist tables deny public access by design.
+
+### Verify
+
+1. Push the workflow to `main` (or merge your PR).
+2. **Actions → Supabase keep-alive → Run workflow** (manual).
+3. Open the run → job **ping** should succeed with `Supabase keep-alive OK`.
+
+If it fails with HTTP 401/403, recheck the service role key. If the project was already paused, resume it in the Supabase dashboard first, then re-run the workflow.
+
 ---
 
 ## Google Search Console
