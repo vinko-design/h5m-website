@@ -40,6 +40,8 @@ When you start, talk about yourself and what you'd like more of: "I miss us. I k
 
 Take turns. One of you talks about the closeness you miss while the other listens to understand, and then you swap.
 
+![One partner talks while the other listens closely on a sofa at home.](/blog/how-to-bring-back-intimacy-in-a-relationship/partners-talking-and-listening-on-sofa.webp)
+
 The person talking stays with their own experience. "I feel close to you when we cook together" and "I miss you reaching for my hand" are easy to hear. "You never touch me anymore" is harder to hear, even when it comes from the same feeling.
 
 The person listening has one job for now, which is to understand. Defending, explaining, and fixing can wait. Say back what you heard in your own words, such as "So you miss us just talking, without phones, and lately it feels like we only talk about chores." Then ask whether you got it right, and maybe one question to understand it better. A [review of research on how romantic partners respond to each other](https://pubmed.ncbi.nlm.nih.gov/37515977/) describes feeling that your partner is responsive to you as basic to how intimacy develops and lasts. Listening gives each of you a chance to understand what the other misses before choosing a step.
