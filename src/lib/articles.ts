@@ -1,5 +1,6 @@
 import "server-only";
 
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { cache } from "react";
@@ -165,6 +166,12 @@ function loadArticle(fileName: string): LoadedArticle {
 
   assertBodyImages(slug, parsed.content);
 
+  // A changed source image needs a new URL for cached responsive variants.
+  const heroVersion = createHash("sha256")
+    .update(fs.readFileSync(path.join(process.cwd(), "public", data.hero.src)))
+    .digest("hex")
+    .slice(0, 16);
+
   return {
     published: true,
     article: {
@@ -176,7 +183,7 @@ function loadArticle(fileName: string): LoadedArticle {
       updatedAt: data.updatedAt,
       payoffList: data.payoffList ?? false,
       hero: {
-        src: data.hero.src,
+        src: `${data.hero.src}?v=${heroVersion}`,
         alt: data.hero.alt,
         width: heroSize.width,
         height: heroSize.height,

@@ -109,6 +109,7 @@ export default function BlogIndexPage() {
                         alt={article.hero.alt}
                         width={article.hero.width}
                         height={article.hero.height}
+                        unoptimized
                         sizes="(min-width: 768px) 288px, 100vw"
                         className="aspect-video w-full rounded-2xl object-cover"
                       />

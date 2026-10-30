@@ -172,6 +172,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             width={article.hero.width}
             height={article.hero.height}
             priority
+            unoptimized
             sizes="(min-width: 768px) 768px, 100vw"
             className="mt-8 h-auto w-full rounded-2xl"
           />
