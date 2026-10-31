@@ -5,6 +5,7 @@ heading: How to bring back intimacy in a relationship by talking about what you 
 publishedAt: 2026-10-29
 updatedAt: 2026-10-29
 published: true
+payoffList: true
 hero:
   src: /blog/how-to-bring-back-intimacy-in-a-relationship/how-to-bring-back-intimacy-in-a-relationship.webp
   alt: A couple walking together and talking about how to bring back intimacy in a relationship.
@@ -57,6 +58,8 @@ Start with something small enough that you could both say yes to it this week. H
 3. Time set aside for just the two of you, with phones put away
 4. Something new together, like a different walk, a new recipe, or a class
 5. Sexual connection, if you both want it
+
+![Five small steps to try together: more everyday touch, saying what you appreciate, time for just the two of you, something new together, and sexual connection if you both want it.](/blog/how-to-bring-back-intimacy-in-a-relationship/check-in-questions.webp)
 
 A small step is easy to agree to, and easy to change if it doesn't feel right. Trying to regain intimacy in a relationship all at once can turn it into a test you're both worried about failing.
 
