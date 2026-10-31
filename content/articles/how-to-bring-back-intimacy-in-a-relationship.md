@@ -42,6 +42,8 @@ When the conversation begins, talk about yourself and what you'd like more of: "
 
 ## How do you each say what you miss, and listen?
 
+![A man talks while his partner sits turned toward him on a sofa at home, listening closely.](/blog/how-to-bring-back-intimacy-in-a-relationship/partners-talking-and-listening-on-sofa.webp)
+
 Take turns. One of you talks about the closeness you miss while the other listens to understand, and then you swap.
 
 Whoever is talking stays with their own experience. "I feel close to you when we cook together" and "I miss you reaching for my hand" are easy to hear. "You never touch me anymore" is harder to hear, even when it comes from the same feeling.
@@ -59,6 +61,8 @@ Start with something small enough that you could both say yes to it this week. H
 - Time set aside for just the two of you, with phones put away
 - Something new together, like a different walk, a new recipe, or a class
 - Sexual connection, as something you choose together
+
+![Five small steps to try together: more everyday touch, saying what you appreciate, time for just the two of you, something new together, and sexual connection if you both want it.](/blog/how-to-bring-back-intimacy-in-a-relationship/check-in-questions.webp)
 
 A small step is easy to agree to, and easy to change if it doesn't feel right. Trying to regain intimacy in a relationship all at once can turn it into a test you're both worried about failing.
 
