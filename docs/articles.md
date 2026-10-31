@@ -42,7 +42,7 @@ hero:
 
 The markdown body starts at the first H2. The layout renders the H1, so the file has no `#` heading. The layout renders a join section under the article. A closing sentence in the body may point at that section. It says the reader can join the waitlist below, and it does not link to `/`.
 
-`payoffList: true` styles the article's one ordered list. A simple list of short items is the usual case. When the page explains each item, a headed list is an option: the card image comes first, then each item is a heading with its paragraph indented under it, so the questions are not printed twice. The questions stay real text.
+`payoffList: true` styles the article's list, whether numbered or bulleted. A simple list of short items is the usual case. When the page explains each item, a headed list is an option: the card image comes first, then each item is a heading with its paragraph indented under it, so the questions are not printed twice. The questions stay real text.
 
 ```md
 ![Alt text.](/blog/<slug>/check-in-questions.webp)
@@ -58,7 +58,7 @@ Draw the image with:
 node scripts/render-question-card.mjs content/articles/<slug>.md
 ```
 
-The script reads the item headings, or the item text when there is no heading. It draws a simple on-brand SVG and writes `public/blog/<slug>/check-in-questions.webp`. The card has no border. The page draws that in CSS, on this image only. A gold line sits in the footer, inside the margins, runs above the wordmark, and stops short of the hand. The hand sits on the right. The words High Five Moments sit just to its left, under the line, in DM Sans ExtraBold and indigo. The approved example sits with that article’s hero: `public/blog/relationship-check-in/check-in-questions.webp`. The markdown image uses that file and an alt. An image model does not draw this card.
+The script reads the first numbered or bulleted list, using the item headings or the item text when there is no heading. The card uses the same marker style as the source list. It draws a simple on-brand SVG and writes `public/blog/<slug>/check-in-questions.webp`. The card has no border. The page draws that in CSS, on this image only. A gold line sits in the footer, inside the margins, runs above the wordmark, and stops short of the hand. The hand sits on the right. The words High Five Moments sit just to its left, under the line, in DM Sans ExtraBold and indigo. The approved example sits with that article’s hero: `public/blog/relationship-check-in/check-in-questions.webp`. The markdown image uses that file and an alt. An image model does not draw this card.
 
 A build fails when a published article is missing its hero, the hero is the wrong size, a body image has no alt text, or a body image sits outside `public/blog/<slug>/`.
 

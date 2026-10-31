@@ -3,7 +3,7 @@ title: How to bring back intimacy in a relationship
 description: "How to bring back intimacy in a relationship: talk about the closeness each of you misses, then pick one next step you both feel comfortable with."
 heading: How to bring back intimacy in a relationship by talking about what you each miss
 publishedAt: 2026-10-29
-updatedAt: 2026-10-29
+updatedAt: 2026-10-31
 published: true
 payoffList: true
 hero:
@@ -54,11 +54,11 @@ When it's your partner's turn, they may miss something different, or they may sa
 
 Start with something small enough that you could both say yes to it this week. Here are a few kinds of steps to choose from:
 
-1. More everyday touch, like holding hands, a long hug, or sitting close on the sofa
-2. Saying one thing you appreciate about each other, out loud
-3. Time set aside for just the two of you, with phones put away
-4. Something new together, like a different walk, a new recipe, or a class
-5. Sexual connection, as something you choose together
+- More everyday touch, like holding hands, a long hug, or sitting close on the sofa
+- Saying one thing you appreciate about each other, out loud
+- Time set aside for just the two of you, with phones put away
+- Something new together, like a different walk, a new recipe, or a class
+- Sexual connection, as something you choose together
 
 A small step is easy to agree to, and easy to change if it doesn't feel right. Trying to regain intimacy in a relationship all at once can turn it into a test you're both worried about failing.
 

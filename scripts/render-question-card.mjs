@@ -16,14 +16,14 @@ if (!articlePath) {
 
 const slug = path.basename(articlePath, ".md");
 const markdown = fs.readFileSync(articlePath, "utf8");
-const items = firstOrderedList(markdown);
+const { items, ordered } = firstList(markdown);
 
 if (items.length < 3 || items.length > 6) {
   console.error(`Expected 3 to 6 questions in ${articlePath}, found ${items.length}.`);
   process.exit(1);
 }
 
-const svg = cardSvg(items);
+const svg = cardSvg(items, ordered);
 const outDir = path.join("public", "blog", slug);
 const outFile = path.join(outDir, "check-in-questions.webp");
 
@@ -34,16 +34,20 @@ await sharp(Buffer.from(svg.svg))
   .toFile(outFile);
 console.log(`Wrote ${outFile}`);
 
-function firstOrderedList(source) {
+function firstList(source) {
+  let ordered = true;
   const items = [];
   let started = false;
 
   for (const line of source.split("\n")) {
-    const match = line.match(/^\d+\.\s+(?:#{1,6}\s+)?(.+)$/);
+    const match = line.match(/^(\d+\.|[-*+])\s+(?:#{1,6}\s+)?(.+)$/);
 
     if (match) {
+      const itemOrdered = /^\d/.test(match[1]);
+      if (started && itemOrdered !== ordered) break;
+      ordered = itemOrdered;
       started = true;
-      items.push(match[1].trim());
+      items.push(match[2].trim());
       continue;
     }
 
@@ -53,10 +57,10 @@ function firstOrderedList(source) {
     }
   }
 
-  return items;
+  return { items, ordered };
 }
 
-function cardSvg(items) {
+function cardSvg(items, ordered) {
   const width = 1200;
   const row = 84;
   const lineHeight = 42;
@@ -85,7 +89,7 @@ function cardSvg(items) {
       const spans = itemLines
         .map((line, lineIndex) => `<tspan x="168" dy="${lineIndex === 0 ? 0 : lineHeight}">${escapeXml(line)}</tspan>`)
         .join("");
-      return `<text x="96" y="${y}" fill="#4F46E5" font-family="DM Sans" font-size="32" font-weight="700">${index + 1}</text>
+      return `<text x="96" y="${y}" fill="#4F46E5" font-family="DM Sans" font-size="32" font-weight="700">${ordered ? index + 1 : "•"}</text>
   <text x="168" y="${y}" fill="#1E293B" font-family="DM Sans" font-size="32" font-weight="500">${spans}</text>`;
     })
     .join("\n  ");

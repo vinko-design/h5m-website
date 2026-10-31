@@ -117,6 +117,11 @@ const components: Components = {
 
 const questionListComponents: Components = {
   ...components,
+  ul: ({ children }) => (
+    <ul className="mt-6 list-disc space-y-2 pl-6 marker:font-semibold marker:text-[var(--indigo)]">
+      {children}
+    </ul>
+  ),
   ol: ({ children }) => (
     <ol className="mt-6 list-decimal space-y-2 pl-6 marker:font-semibold marker:text-[var(--indigo)]">
       {children}
