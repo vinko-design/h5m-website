@@ -62,13 +62,13 @@ Start with something small enough that you could both say yes to it this week. H
 - Something new together, like a different walk, a new recipe, or a class
 - Sexual connection, as something you choose together
 
-![Five small steps to try together: more everyday touch, saying what you appreciate, time for just the two of you, something new together, and sexual connection if you both want it.](/blog/how-to-bring-back-intimacy-in-a-relationship/check-in-questions.webp)
-
 A small step is easy to agree to, and easy to change if it doesn't feel right. Trying to regain intimacy in a relationship all at once can turn it into a test you're both worried about failing.
 
 Touch that doesn't have to lead anywhere can be a gentle place to begin, especially when sex has become a tense subject. A hug can be just a hug. Appreciation works in a similar way. Noticing something kind your partner did and saying so takes a few seconds, and it shows them that you still see the good things.
 
 Something new gives you a shared experience to talk about afterwards, and it doesn't need to be big or expensive. Sexual connection is on the list because it may be the closeness one or both of you miss most. It sits alongside the other options, as one choice the two of you make together.
+
+![Five small steps to try together: more everyday touch, saying what you appreciate, time for just the two of you, something new together, and sexual connection if you both want it.](/blog/how-to-bring-back-intimacy-in-a-relationship/check-in-questions.webp)
 
 ## How do you agree on a step you're both comfortable with?
 
