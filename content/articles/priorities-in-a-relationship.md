@@ -41,6 +41,8 @@ That one sentence tells your partner what's changing, roughly how long it will l
 
 ## What does support look like for each of you?
 
+![A woman studies at a desk while her partner cooks dinner, shown in two scenes divided diagonally.](/blog/priorities-in-a-relationship/study-support.webp)
+
 Asking for "more support" is a start, but your partner can't do much with it. A request they can act on names an action and a time. "Can you cook on Tuesdays and Thursdays while I'm studying?" gives your partner something they can say yes to, or a starting point if they'd like to suggest a different plan.
 
 [One study of couples](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.609232/full) describes perceived partner responsiveness as the sense that your partner understands your needs and responds in a supportive way. That's a helpful way to think about feeling prioritized. It has two parts: your partner understands what you need, and they respond to it. So when you ask for support, tell your partner what you need and what kind of response would feel helpful.
