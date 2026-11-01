@@ -45,7 +45,7 @@ Asking for "more support" is a start, but your partner can't do much with it. A 
 
 [One study of couples](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.609232/full) describes perceived partner responsiveness as the sense that your partner understands your needs and responds in a supportive way. That's a helpful way to think about feeling prioritized. It has two parts: your partner understands what you need, and they respond to it. So when you ask for support, tell your partner what you need and what kind of response would feel helpful.
 
-Do the same for the relationship itself. These are shared priorities too. When you try the paper exercise, include them alongside your individual ones. Each of you can say what you believe keeps it going. For one person, that might be a phone-free dinner most nights. For the other, it might be a text when they're running late, or one evening out every couple of weeks. You may find you care about different things. One of you might feel cared for when plans are kept, while the other feels cared for when plans can change easily. Neither is wrong, and it's much easier to make room for both once you've each said it out loud.
+Do the same for the relationship itself. Each of you can say what you believe keeps it going. For one person, that might be a phone-free dinner most nights. For the other, it might be a text when they're running late, or one evening out every couple of weeks. You may find you care about different things. One of you might feel cared for when plans are kept, while the other feels cared for when plans can change easily. Neither is wrong, and it's much easier to make room for both once you've each said it out loud.
 
 ## How do you support each other's goals and still make time for the two of you?
 
@@ -77,7 +77,7 @@ A compromise doesn't always mean you each give up half. Sometimes it means takin
 
 Try using a few pieces of paper to start the conversation. If you'd rather skip the paper, you can talk through the same steps.
 
-Each of you takes six sticky notes, or cuts a sheet of A4 paper into six pieces. Write one priority on each piece. Include your personal ones, like "study for my exam," and ones you share, like a project you're working on together or something that keeps the relationship going, such as "Sunday walks together." Six is just the number of spaces. If fewer things are on your mind, leave some blank.
+Each of you takes eight sticky notes, or cuts a sheet of A4 paper into eight pieces. Write one priority on each piece: four personal ones, like "study for my exam," and four you share, like a project you're working on together or something that keeps the relationship going, such as "Sunday walks together." If fewer things are on your mind, leave some blank.
 
 1. Write your personal and shared priorities on your own.
 2. Sort them by how much attention each needs right now.
