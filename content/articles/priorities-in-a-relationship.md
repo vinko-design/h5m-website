@@ -8,7 +8,7 @@ published: true
 payoffList: false
 hero:
   src: /blog/priorities-in-a-relationship/priorities-in-a-relationship.webp
-  alt: A couple walking together and talking about how to bring back intimacy in a relationship.
+  alt: A couple sort small handwritten pieces of paper about their priorities in a relationship on a sunny kitchen table.
 ---
 
 Priorities in a relationship are the things each of you gives time and energy to, plus the things you've decided matter to you as a couple. They can differ without either person being wrong or caring less. Sometimes a difference means a clash over a weekend or a budget; other times, one of you wants help making progress on a career change or getting fit. Start by saying what matters to each of you right now, then choose one thing that needs support or a trade-off and agree on a small next step you'll look at again later.
