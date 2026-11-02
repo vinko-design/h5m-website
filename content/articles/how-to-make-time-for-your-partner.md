@@ -73,6 +73,8 @@ Two people may want different amounts of shared time. One of you might feel rech
 
 Talk about what each of you needs to feel rested, and build that into the plan instead of treating it as whatever's left over. That could be one evening that belongs to each of you alone, and one that belongs to both of you. Sofa time can help here too. Reading in the same room or cooking while the other relaxes nearby can give one person company and the other some quiet, both at once.
 
+![A man reading in an armchair beside a bright window while his partner cooks at the stove behind him.](/blog/how-to-make-time-for-your-partner/time-on-your-own.webp)
+
 If you're the one who wants more time together, try not to treat your partner's time alone as time taken away from you. And if you're the one who wants more space, it helps to say clearly when you'll be back and what you're looking forward to doing together. That gives your partner a clearer idea of when you might spend time together.
 
 ## How do you come back to the plan when life changes?
