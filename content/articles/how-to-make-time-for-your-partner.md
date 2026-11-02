@@ -59,6 +59,8 @@ Small rituals are a good fit for busy weeks because they don't take much plannin
 
 You can also bring each other into things you already do. If one of you goes to the gym, cooks on Sundays, or does grocery shopping, the other can join some of the time. A hobby, a show you only watch together, or a regular coffee spot works the same way. It can turn an activity you would do separately into time side by side, if you both enjoy it.
 
+![A couple preparing dinner together: one chops vegetables while the other stirs a pot on the stove.](/blog/how-to-make-time-for-your-partner/cooking-together.webp)
+
 Being apart doesn't have to mean being out of touch. A message at lunch about something specific from your morning, a call on the way home, or a photo of something that made you think of your partner can help you stay in touch on busy days. A specific message can feel personal. "Saw a dog in a raincoat and thought of you" feels like attention. Choose the kind of message that feels natural to you both.
 
 One thing is worth keeping out of the window if you can: household planning. If your time together turns into talking about bills and dentist appointments, it becomes a meeting. Give those things their own moment so the window stays something you both look forward to. And if the plan you picked stops being enjoyable, change it. It's meant to be time you want, not one more thing on the list.
