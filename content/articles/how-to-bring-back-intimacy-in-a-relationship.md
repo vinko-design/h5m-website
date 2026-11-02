@@ -3,7 +3,7 @@ title: How to bring back intimacy in a relationship
 description: "How to bring back intimacy in a relationship: talk about the closeness each of you misses, then pick one next step you both feel comfortable with."
 heading: How to bring back intimacy in a relationship by talking about what you each miss
 publishedAt: 2026-10-29
-updatedAt: 2026-10-31
+updatedAt: 2026-11-02
 published: true
 payoffList: true
 hero:
@@ -28,7 +28,7 @@ Sexual connection can matter deeply to one or both of you, and it belongs in the
 
 Changes in your daily life, or in what you share with each other, may be part of what you want to talk about. Perhaps your evenings look different now, or one of you has something on your mind that the other doesn't know about. Ask each other what you've noticed, without deciding in advance who or what is to blame.
 
-The way you describe it shapes the whole conversation. "Your late shifts mean we barely see each other" puts the problem on your partner. "Our evenings have disappeared since the late shifts started" describes something that's happening to both of you. With the second version, you're looking at a shared situation together.
+The way you describe it shapes the whole conversation. "Your late shifts mean we barely see each other" puts the problem on your partner. "Our evenings have disappeared since the late shifts started" describes something that's happening to both of you. With the second version, you're looking at a shared situation together. If that shared situation is mostly about busy schedules, [making time for your partner](/blog/how-to-make-time-for-your-partner) covers how to find a window you can both keep.
 
 ## How can you bring it up gently?
 

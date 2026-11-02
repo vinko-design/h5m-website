@@ -3,7 +3,7 @@ title: Relationship check-in questions to see how you're both doing
 description: A relationship check-in is a regular talk about how things are going between you. Here are five questions to ask, and how to keep it easy to come back to.
 heading: Relationship check-in questions to see how you're both doing
 publishedAt: 2026-10-26
-updatedAt: 2026-10-26
+updatedAt: 2026-11-02
 published: true
 payoffList: true
 hero:
@@ -53,7 +53,7 @@ Ask the same five questions each time, in the same order, and let both of you an
 
 3. ### When did we feel close, and when did we feel distant?
 
-   This one is about the two of you together. Keep to what happened rather than what it says about anyone: "we kept going to bed at different times," or "we've been good at Saturday mornings lately." Give the close moments as much attention as the distant ones. If the same thing keeps coming up, check-in after check-in, that's probably the one worth working on.
+   This one is about the two of you together. Keep to what happened rather than what it says about anyone: "we kept going to bed at different times," or "we've been good at Saturday mornings lately." Give the close moments as much attention as the distant ones. If the same thing keeps coming up, check-in after check-in, that's probably the one worth working on. If what keeps coming up is a kind of closeness one of you misses, this guide on [how to bring back intimacy in a relationship](/blog/how-to-bring-back-intimacy-in-a-relationship) walks through a longer conversation about it.
 
 4. ### What would help you most in the days ahead?
 

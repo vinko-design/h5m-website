@@ -3,7 +3,7 @@ title: Priorities in a relationship when you want different things
 description: Priorities in a relationship can differ without anyone being wrong. Sort what matters, decide what stays firm and what can move, and choose one next step.
 heading: "Priorities in a relationship: what to do when you want different things"
 publishedAt: 2026-11-01
-updatedAt: 2026-11-01
+updatedAt: 2026-11-02
 published: true
 payoffList: false
 hero:
@@ -128,7 +128,7 @@ Maybe your priorities don't seem to matter much to your partner. Or maybe it's b
 
 Start with what you've noticed and what you'd like, and leave out the verdict. "Our plans have fallen through a lot lately, and I miss you. Could we pick one evening this week that we both keep?" names the problem and gives your partner something concrete to answer. "You never make time for me" assumes you know why they're doing it.
 
-Then listen. Your partner might be more stretched than you knew, or they might feel the same distance and not have known how to say it. If neither of you has been giving the relationship enough time, talk about it as something you're both responsible for: "We've both been so busy. What would help us get some time back?"
+Then listen. Your partner might be more stretched than you knew, or they might feel the same distance and not have known how to say it. If neither of you has been giving the relationship enough time, talk about it as something you're both responsible for: "We've both been so busy. What would help us get some time back?" Our guide on [how to make time for your partner](/blog/how-to-make-time-for-your-partner) can help you find a window in the weeks you actually have.
 
 It's often easier to start with one manageable request and build from there. One evening a week that you both keep is a good first step. Once that's holding, you can ask for more. Starting small is a way to begin, and it doesn't mean settling for less forever.
 
