@@ -8,7 +8,7 @@ published: true
 payoffList: false
 hero:
   src: /blog/how-to-make-time-for-your-partner/how-to-make-time-for-your-partner.webp
-  alt: Relationship check-in questions on a card resting on a sofa cushion between two people.
+  alt: "How to make time for your partner: a couple laughing over morning coffee at a kitchen table, with their phones face down."
 ---
 
 To make time for your partner, start by finding out what time together means to each of you, because one of you may be happy sharing a room while the other wants real attention. Then pick one realistic window in the schedules you actually have, agree on how you'll use it, and look at the plan again when life changes. Start with a plan you both want and leave room for time on your own.
