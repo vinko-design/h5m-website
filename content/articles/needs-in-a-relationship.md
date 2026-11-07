@@ -28,8 +28,6 @@ Basic needs in a relationship can sound abstract when you list them, so treat th
 - Time together, and some time on your own
 - Practical help, or encouragement with something you're working toward
 
-![Six prompts for thinking about basic needs in a relationship, from feeling safe enough to be honest to practical help or encouragement.](/blog/needs-in-a-relationship/check-in-questions.webp)
-
 A need gets much easier to talk about once it's specific. "Being listened to" might turn into "ten minutes when I get home where we put our phones down and ask about each other's day." "Encouragement" might turn into "asking how the job search is going, without me having to bring it up." The specific version shows your partner what the need looks like on an ordinary Tuesday, and that's something they can actually do.
 
 ## What if you go blank when someone asks what you need?
@@ -53,6 +51,10 @@ You also don't need to sort every item into "need" or "want" before you talk. Fo
 ## How do you each name a few needs together?
 
 A short exercise gives you both a fair, even start. You'll need some paper or a note on your phone each, and an unhurried hour when neither of you is about to leave.
+
+The prompts from earlier can sit beside you while you write.
+
+![Six prompts for thinking about basic needs in a relationship, from feeling safe enough to be honest to practical help or encouragement.](/blog/needs-in-a-relationship/check-in-questions.webp)
 
 1. On your own, write up to three things you need right now.
 2. Make at least one about your own life and one about the two of you.

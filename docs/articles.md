@@ -42,14 +42,14 @@ hero:
 
 The markdown body starts at the first H2. The layout renders the H1, so the file has no `#` heading. The layout renders a join section under the article. A closing sentence in the body may point at that section. It says the reader can join the waitlist below, and it does not link to `/`.
 
-`payoffList: true` styles the article's list, whether numbered or bulleted. A simple list of short items is the usual case. When the page explains each item, a headed list is an option: the card image comes first, then each item is a heading with its paragraph indented under it, so the questions are not printed twice. The questions stay real text.
+`payoffList: true` styles the article's list, whether numbered or bulleted. A simple list of short items is the usual case. When the page explains each item, a headed list is an option: each item is a heading with its paragraph indented under it. The questions stay real text.
+
+Keep both the HTML list and the card image. The HTML is the article and the copy the page ranks on. The image file is what image search can index. Do not place the card directly above or directly below the list, or directly beside headings that repeat the same words. One paragraph between matching words is not enough. Put the card later, where it has a different job, and say that job in the sentence before the image. A prompt list can return beside a later exercise, after the reader has used the ideas. If no later spot gives the card a different job, leave it out.
 
 ```md
+The prompts from earlier can sit beside you while you write.
+
 ![Alt text.](/blog/<slug>/check-in-questions.webp)
-
-1. ### First question?
-
-   The paragraph about it.
 ```
 
 Draw the image with:
