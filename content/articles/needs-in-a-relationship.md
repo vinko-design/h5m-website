@@ -5,10 +5,10 @@ heading: Name your needs in a relationship, then pick one step
 publishedAt: 2026-11-04
 updatedAt: 2026-11-07
 published: true
-payoffList: false
+payoffList: true
 hero:
   src: /blog/needs-in-a-relationship/needs-in-a-relationship.webp
-  alt: A couple sitting together on a sunny balcony, talking about their needs in a relationship while one of them listens closely.
+  alt: On a couch, one partner reads needs in a relationship from a sheet of paper while the other listens, and only the back of the paper shows.
 ---
 
 Needs in a relationship are the things each of you relies on to feel safe and cared for with the other person. They include trust, being heard, time together, and help when life is busy. To talk about them, you each name a few specific needs in your own words. Then you take turns saying them as something you'd like, and together you pick one next step to try and look back on later.
@@ -28,6 +28,8 @@ Basic needs in a relationship can sound abstract when you list them, so treat th
 - Time together, and some time on your own
 - Practical help, or encouragement with something you're working toward
 
+![Six prompts for thinking about basic needs in a relationship, from feeling safe enough to be honest to practical help or encouragement.](/blog/needs-in-a-relationship/check-in-questions.webp)
+
 A need gets much easier to talk about once it's specific. "Being listened to" might turn into "ten minutes when I get home where we put our phones down and ask about each other's day." "Encouragement" might turn into "asking how the job search is going, without me having to bring it up." The specific version shows your partner what the need looks like on an ordinary Tuesday, and that's something they can actually do.
 
 ## What if you go blank when someone asks what you need?
@@ -38,7 +40,7 @@ Try thinking back over the last few weeks and asking yourself a few of these. Wh
 
 Your answers don't need to be tidy. "I liked it when we cooked together last Sunday" might be pointing at time together, or at doing something side by side without screens. "I felt a bit invisible at your friend's party" might be pointing at wanting your partner to check in with you when you're somewhere new. Follow the feeling first and find the words for the need afterwards.
 
-Sometimes it's easier to say what you think your partner needs, while your own answer is still missing. These questions are for finding your own words, so give yourself some quiet time with them before you talk together.
+Give yourself some quiet time with these questions before you and your partner talk. You don't have to answer all of them, and you don't have to finish in one go. Write down whatever comes up, even if it's only a few words or half a thought. Then bring your notes with you when you sit down together. It's fine to say, "I'm not sure what this means yet, but it keeps coming up for me." A rough answer is enough to start with.
 
 ## How can a list of needs and wants help?
 
@@ -82,6 +84,8 @@ Here's how that might sound in real life.
 "If you could make the lunches on weekdays, that would make a big difference."
 
 "I can do that. Can I ask for something too? I'd love one evening a week where we don't talk about the house at all."
+
+![One partner packs weekday lunches in a bright kitchen while the other, ready for work, smiles over a cup of coffee.](/blog/needs-in-a-relationship/needs-in-a-relationship-morning-lunches.webp)
 
 The asking goes both ways. Once you've said what you need, ask your partner something like "Is there anything you've been needing from me lately?" and give them time to think. They may have an answer ready, or they may need a day to find one. Both are fine. If your partner's answer surprises you, try asking what it would look like day to day before you respond. That helps you hear the need clearly before you react to it.
 
