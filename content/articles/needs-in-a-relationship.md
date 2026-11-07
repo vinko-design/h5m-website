@@ -3,7 +3,7 @@ title: Name your needs in a relationship, then pick one step
 description: Needs in a relationship get easier to talk about once you each name a few in your own words, say what you'd like, and pick one next step together.
 heading: Name your needs in a relationship, then pick one step
 publishedAt: 2026-11-04
-updatedAt: 2026-11-04
+updatedAt: 2026-11-07
 published: true
 payoffList: false
 hero:
@@ -32,19 +32,19 @@ A need gets much easier to talk about once it's specific. "Being listened to" mi
 
 ## What if you go blank when someone asks what you need?
 
-If you go blank, there's a gentler way in. "What do I need?" is a big question, and it can make you reach for what you think you *should* need. Smaller questions about your real days tend to work better.
+If you go blank, there's a gentler way in. "What do I need?" is a big question, and it can make you reach for what you think you *should* need. Smaller questions about a normal week tend to work better.
 
 Try thinking back over the last few weeks and asking yourself a few of these. When did I feel most relaxed with my partner, and what was happening? When did I feel a bit low or alone, even with them in the room? What do I find myself wishing for on the way home? Is there something I keep almost asking for and then dropping?
 
 Your answers don't need to be tidy. "I liked it when we cooked together last Sunday" might be pointing at time together, or at doing something side by side without screens. "I felt a bit invisible at your friend's party" might be pointing at wanting your partner to check in with you when you're somewhere new. Follow the feeling first and find the words for the need afterwards.
 
-If it's easier for you to say what your partner needs than what you need, notice that too. It's a good reason to give yourself some quiet time with these questions before you talk together.
+Sometimes it's easier to say what you think your partner needs, while your own answer is still missing. These questions are for finding your own words, so give yourself some quiet time with them before you talk together.
 
 ## How can a list of needs and wants help?
 
 Reading a list of needs and wants in a relationship can work like a mirror. You go down the lines and notice which ones make you react. Maybe one makes you think "yes, that's been missing," or another makes you realize something is going well. The list helps you find your own words.
 
-Use it for yourself. It isn't a checklist to hold up against your partner, and it isn't a list of conditions they have to meet. If you catch yourself ticking off what they do or don't do, put the list down and come back to your own experience.
+Use the list to notice what's important to you. While you read, you may also notice what your partner already does, or what you've been missing from them. Write that down as your own experience. Each of you can keep those notes and look at them together later. The list is a starting place for that conversation, and it doesn't have to be a set of conditions your partner has to meet.
 
 You also don't need to sort every item into "need" or "want" before you talk. For this conversation, what matters is noticing what's important to you right now and being able to say it.
 
