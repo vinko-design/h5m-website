@@ -1,7 +1,7 @@
 ---
-title: Intimate questions to ask your partner and hear the answers
+title: Intimate questions to ask your partner to grow closer
 description: Intimate questions to ask your partner about what closeness means to each of you, how to start gently, and how to listen without keeping score.
-heading: Intimate questions to ask your partner and hear the answers
+heading: Intimate questions to ask your partner to grow closer
 publishedAt: 2026-11-07
 updatedAt: 2026-11-07
 published: true
@@ -17,11 +17,11 @@ You might be here because things have felt a little less close than you'd like. 
 
 ## Why ask each other about closeness?
 
-These questions help you find out what closeness means to your partner right now, and they let your partner find out the same about you. Two people in the same relationship can feel close in very different moments. One of you might feel nearest after a long talk in the car. The other might feel it when you're both reading in bed with your feet touching, saying nothing at all. Both of those are real closeness, and it's hard to make room for one you've never heard about.
+These questions help you find out what closeness means to your partner right now, and they let your partner find out the same about you. Two people in the same relationship can feel close in very different moments. One of you might feel nearest after a long talk in the car. The other might feel it when you're both reading in bed with your feet touching, saying nothing at all. Both of those are real closeness. Once you've heard which one matters to your partner, you know what to make room for.
 
 It helps to treat the answers as news, even if you've been together for years. People change. What made your partner feel loved three years ago may still matter, or something else may have taken its place since a new job or a move. If you ask only to confirm what you already think, you'll hear less. Asking because you're curious leaves room to be surprised.
 
-There are no right answers, and nothing you have to get right. You aren't checking whether the relationship is working. An answer that surprises you is useful, and so is "I'm not sure, let me think about it."
+There are no right answers to collect. Asking is one way you look after the relationship, on an ordinary week as well as when something feels off. An answer that surprises you is useful, and so is "I'm not sure, let me think about it."
 
 ## When is a good time to ask?
 
@@ -82,6 +82,10 @@ Either of you can skip a question, or stop the whole conversation, at any point 
 What your partner tells you belongs to them. If something they shared comes back later in an argument, the next conversation like this gets much harder to have. Keep their answers safe, and they'll find it easier to tell you more.
 
 When you're ready to finish, end on something warm. Tell your partner one thing you liked hearing.
+
+Once you know how you'll listen, these are the questions to take into the conversation.
+
+![Six intimate questions to ask your partner, on a card to use when you sit down together.](/blog/intimate-questions-to-ask-your-partner/check-in-questions.webp)
 
 ## When one of you misses a kind of closeness
 
