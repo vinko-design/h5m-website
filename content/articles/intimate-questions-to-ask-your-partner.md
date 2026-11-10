@@ -8,7 +8,7 @@ published: true
 payoffList: true
 hero:
   src: /blog/intimate-questions-to-ask-your-partner/intimate-questions-to-ask-your-partner.webp
-  alt: One partner waters a balcony plant while the other pauses in the doorway with two glasses, a light moment for intimate questions to ask your partner.
+  alt: A woman draws a cream throw across her lap on a pale sofa while a man holds the other end, a pause for intimate questions to ask your partner.
 ---
 
 Intimate questions to ask your partner are questions about what helps each of you feel close. That might be feeling heard, a kind of touch, laughing together, plans you share, sex, or something neither of you has put into words yet. Ask a few when you both have time, start with something easy, and let both of you answer each one. Either of you can skip a question or stop, and nobody keeps score.
