@@ -3,12 +3,12 @@ title: Intimate questions to ask your partner to grow closer
 description: Intimate questions to ask your partner about what closeness means to each of you, how to start gently, and how to listen without keeping score.
 heading: Intimate questions to ask your partner to grow closer
 publishedAt: 2026-11-07
-updatedAt: 2026-11-07
+updatedAt: 2026-11-10
 published: true
 payoffList: true
 hero:
   src: /blog/intimate-questions-to-ask-your-partner/intimate-questions-to-ask-your-partner.webp
-  alt: Placeholder hero for intimate questions to ask your partner. Replace before publication.
+  alt: One partner waters a balcony plant while the other pauses in the doorway with two glasses, a light moment for intimate questions to ask your partner.
 ---
 
 Intimate questions to ask your partner are questions about what helps each of you feel close. That might be feeling heard, a kind of touch, laughing together, plans you share, sex, or something neither of you has put into words yet. Ask a few when you both have time, start with something easy, and let both of you answer each one. Either of you can skip a question or stop, and nobody keeps score.
@@ -26,6 +26,8 @@ There are no right answers to collect. Asking is one way you look after the rela
 ## When is a good time to ask?
 
 Pick a time when you can both stay with the conversation. A park bench on a day off can work, and so can the couch once you've both eaten, or a morning when the first plan is still hours away. Leave it if you've just had a disagreement, when a question can sound like a complaint.
+
+![At the dining table, she eats pasta while he pours into her glass and stays seated.](/blog/intimate-questions-to-ask-your-partner/dining-table.webp)
 
 If you've been wondering how to have deep conversations with your partner, the start is usually simpler than it seems. Say what you'd like to do, and ask whether now suits them. You could say, "I found some questions about feeling close to each other, and I thought it might be nice to ask each other a few. Want to try tonight, or would another evening this week be better?"
 
