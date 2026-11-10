@@ -8,7 +8,7 @@ published: true
 payoffList: true
 hero:
   src: /blog/topics-to-talk-about-with-your-partner/topics-to-talk-about-with-your-partner.webp
-  alt: A couple laughs together on a sunny walk while trying a few topics to talk about with your partner.
+  alt: A couple laughs together on a sunny sidewalk, one place for topics to talk about with your partner.
 ---
 
 Good topics to talk about with your partner range from light ones, like what made you laugh this week, to serious ones, like where you'd like your life together to be in a few years. Pick two or three together, take turns answering, and follow whichever thread interests you most. Either of you can skip a topic or stop whenever you like, and nobody keeps score.
@@ -81,6 +81,8 @@ Use them wherever you already spend time together. One topic over dinner works w
 
 Longer occasions leave room for several. A long drive, an evening walk, or a date night can hold two or three topics with plenty of time for side threads. Side by side, in a car or on a walk, some of the deeper subjects come more naturally, because nobody has to look across a table the whole time.
 
+![A couple talks on a long drive, one of the places a topic can come up.](/blog/topics-to-talk-about-with-your-partner/long-drive.webp)
+
 Doing something together can also start a conversation by itself. Playing a card game, cooking a new recipe, or painting a room gives you something to talk around, and a topic can slip in during the quiet stretches.
 
 Before your next drive or walk, you might each choose one topic from this card to bring along.
@@ -96,6 +98,8 @@ A light chat is finished when you've talked. If you laughed about the dog and th
 A deeper thread sometimes leaves you with something you both want. Talking about the next few years, you might realize you'd both like to spend more weekends outdoors. When that happens, you can close by naming one thing you'd like to pay attention to together, something small enough to actually happen, like a hike before the end of the month. That's one way to end a serious talk. It isn't the point of every conversation.
 
 When that small thing does happen, notice it together. Say how much you enjoyed it. That's a high-five moment, and you can celebrate it however suits you, with an actual high five, a good lunch afterwards, or just a smile. If the month gets busy and the hike doesn't happen, say so, choose another weekend, and try again.
+
+![A couple gives each other a high five on a sunny hiking trail after a walk they planned together.](/blog/topics-to-talk-about-with-your-partner/trail-high-five.webp)
 
 If you'd like a regular conversation about how the days have gone between you, these [relationship check-in questions](/blog/relationship-check-in) give it a simple shape. The topics here can stay for any day you'd simply like to talk.
 
