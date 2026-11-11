@@ -1,9 +1,9 @@
 ---
-title: Topics to talk about with your partner to know each other better
-description: Topics to talk about with your partner, from light and fun to serious ones about your future. Pick a few together, take turns, and skip any you like.
-heading: Topics to talk about with your partner to know each other better
+title: Topics to talk about with your partner so you stay connected
+description: Topics to talk about with your partner so you stay connected. Pick a few together, from light to serious, take turns, and skip any you like.
+heading: Topics to talk about with your partner so you stay connected
 publishedAt: 2026-11-10
-updatedAt: 2026-11-10
+updatedAt: 2026-11-11
 published: true
 payoffList: true
 hero:
