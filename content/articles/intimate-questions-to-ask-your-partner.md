@@ -3,7 +3,7 @@ title: Intimate questions to ask your partner to grow closer
 description: Intimate questions to ask your partner about what closeness means to each of you, how to start gently, and how to listen without keeping score.
 heading: Intimate questions to ask your partner to grow closer
 publishedAt: 2026-11-07
-updatedAt: 2026-11-10
+updatedAt: 2026-11-17
 published: true
 payoffList: true
 hero:
@@ -11,7 +11,7 @@ hero:
   alt: A woman draws a cream throw across her lap on a pale sofa while a man holds the other end, a pause for intimate questions to ask your partner.
 ---
 
-Intimate questions to ask your partner are questions about what helps each of you feel close. That might be feeling heard, a kind of touch, laughing together, plans you share, sex, or something neither of you has put into words yet. Ask a few when you both have time, start with something easy, and let both of you answer each one. Either of you can skip a question or stop, and nobody keeps score.
+Intimate questions to ask your partner are questions about what helps each of you feel close. That might be feeling heard, a kind of touch, laughing together, plans you share, sex, or something neither of you has put into words yet. Ask a few when you both have time, start with something easy, and let both of you answer each one. Either of you can skip a question or stop, and it's not about keeping score.
 
 You might be here because things have felt a little less close than you'd like. Or maybe most of your conversations have turned practical, about groceries and work and who's picking up whom, and you'd like to know your partner better again. A few good questions and real attention to the answers are a good place to start.
 

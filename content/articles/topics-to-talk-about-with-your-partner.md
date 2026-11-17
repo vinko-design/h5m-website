@@ -3,7 +3,7 @@ title: Topics to talk about with your partner so you stay connected
 description: Topics to talk about with your partner so you stay connected. Pick a few together, from light to serious, take turns, and skip any you like.
 heading: Topics to talk about with your partner so you stay connected
 publishedAt: 2026-11-10
-updatedAt: 2026-11-11
+updatedAt: 2026-11-17
 published: true
 payoffList: true
 hero:
@@ -11,7 +11,7 @@ hero:
   alt: A couple laughs together on a sunny sidewalk, one place for topics to talk about with your partner.
 ---
 
-Good topics to talk about with your partner range from light ones, like what made you laugh this week, to serious ones, like where you'd like your life together to be in a few years. Pick two or three together, take turns answering, and follow whichever thread interests you most. Either of you can skip a topic or stop whenever you like, and nobody keeps score.
+Good topics to talk about with your partner range from light ones, like what made you laugh this week, to serious ones, like where you'd like your life together to be in a few years. Pick two or three together, take turns answering, and follow whichever thread interests you most. Either of you can skip a topic or stop whenever you like, and it's not about keeping score.
 
 You might be here because your conversations have settled into the same few subjects, like the car that needs a service and what you're doing on Saturday. Or you might be here because talking used to come without any effort, and lately you sit down together and aren't sure what to say. Those are two different situations, and a few good topics can help with either one.
 
@@ -41,7 +41,7 @@ These six go from light and fun to serious, with time in the middle for what you
 
 1. ### Something that made you laugh this week
 
-   Maybe it was a story a coworker told, a video a friend sent, or the dog running off with a sock. A topic like this is for enjoying a few minutes together, and that's reason enough. If you both like where it goes, try the funniest thing that ever happened to you on a holiday. Keep it about laughing together, and leave teasing each other out of it.
+   Maybe it was a story a coworker told, a video a friend sent, or the dog running off with a sock. A topic like this is for enjoying a few minutes together, and that reason is enough. If you both like where it goes, try the funniest thing that ever happened to you on a holiday. Keep it about laughing together, and leave teasing each other out of it.
 
 2. ### A trip you'd love to take together
 
@@ -61,7 +61,7 @@ These six go from light and fun to serious, with time in the middle for what you
 
 6. ### Where you'd like your life together to be in a few years
 
-   This is the serious one. Talk about where you'd like to live, how you'd like work to fit into your days, whether you want children, or a money aim such as saving for a place with a garden. Your answers might not match, and that's useful to know. You're two people telling each other something true, and nothing has to be decided tonight.
+   This is the serious one. Talk about where you'd like to live, how you'd like work to fit into your days, whether you want children, or a financial aim such as saving for a place with a garden. Your answers might not match, and that's useful to know. You're two people telling each other something true, and nothing has to be decided tonight.
 
 If a conversation turns toward the kinds of closeness each of you wants, these [intimate questions to ask your partner](/blog/intimate-questions-to-ask-your-partner) give that subject its own time.
 
@@ -73,7 +73,7 @@ Follow one thread instead of moving quickly through the list. If the trip topic 
 
 Either of you can skip a topic, or stop the whole conversation, without giving a reason. Saying "I'd rather leave that one for now" should feel normal, and hearing it shouldn't lead to a debate. If your partner doesn't want to talk about something, let them know you'd be glad to whenever they want, and leave the choice with them.
 
-Nobody keeps score. Different answers are two people describing their own lives, and nobody is ahead or behind. What your partner shares belongs to them, so keep it out of later disagreements. That way, both of you feel free to say more next time.
+Be careful the conversation doesn't turn into scorekeeping. Different answers are two people describing their own lives, and nobody is ahead or behind. What your partner shares belongs to them, so keep it out of later disagreements. That way, both of you feel free to say more next time.
 
 ## When and where do these topics fit?
 
