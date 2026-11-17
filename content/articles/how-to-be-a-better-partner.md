@@ -1,7 +1,7 @@
 ---
-title: "How to be a better partner so you both look after one thing"
+title: "How to be a better partner so you both feel loved"
 description: "How to be a better partner: each of you names one thing you'd love, you listen to each other, and you pick one to look after together."
-heading: "How to be a better partner so you both look after one thing"
+heading: "How to be a better partner so you both feel loved"
 publishedAt: 2026-11-12
 updatedAt: 2026-11-12
 published: true
