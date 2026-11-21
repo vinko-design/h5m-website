@@ -1,9 +1,9 @@
 ---
 title: Is moving in together after 6 months right for both of you?
-description: Moving in together after 6 months? No set number of months decides it. Each of you lists what you'd need first, then you compare and choose a next step.
+description: Moving in together after 6 months? No set number of months decides it. You can each list what you'd need, then look for a next step that fits both.
 heading: Is moving in together after 6 months right for both of you?
 publishedAt: 2026-11-19
-updatedAt: 2026-11-19
+updatedAt: 2026-11-21
 published: true
 payoffList: true
 hero:
@@ -11,7 +11,7 @@ hero:
   alt: A couple sits at a sunny kitchen table, each writing their own notes about moving in together after 6 months.
 ---
 
-Moving in together after 6 months can be right for both of you, and so can waiting a while longer. No standard number of months decides it. What decides it is what each of you would need to be true before you share a home, so each of you writes that down, you compare the two lists, and you choose a next step that fits both.
+Moving in together after 6 months can be right for both of you, and so can waiting a while longer. No standard number of months decides it. What decides it is what each of you would need to be true before you share a home. One way to work that out is for each of you to write your own list, then look at the two lists together and see which next step fits both of you.
 
 Maybe the idea came up over dinner, and one of you lit up while the other went a little quiet. Or maybe you're both excited, and a friend asked whether it's a bit soon. Either way, six months is the timeline in front of you, and the decision belongs to both of you.
 
@@ -62,7 +62,7 @@ Either of you can suggest it. You might say, "I keep thinking about us living to
 5. Take turns reading one item at a time from your lists.
 6. Put both lists side by side and look at where they match and where they differ.
 
-Writing separately keeps each list honest to the person who wrote it, without either of you adjusting to the other's answers. Reading your reasons first gives every item that follows some context. When it's your turn to listen, say back what you heard, something like "So you'd want a desk for your calls, and right now there's no room for one at my place?" Then ask what it would look like once it's sorted.
+Writing separately keeps each list honest to the person who wrote it, without either of you adjusting to the other's answers. Reading your reasons first gives every item that follows some context. When it's your turn to listen, say back what you heard, something like "So you'd want a desk for your calls, and right now there's no room for one at my place?" Then you might add, "Could we talk that one through together?"
 
 Matches are a natural place to start. If you both wrote something like "spend a full week living at one place," you've already found a first step. Differences tell you something too. Say one list has three items still to come and the other has none. That means one of you has more you'd like in place before a date is set, and it's better to learn that now than on moving day. Go through each item that's still to come and ask what would make it true. Some you can do together, like trying a week at one apartment. Others only the person who wrote them can answer, like how they'd feel about telling their parents.
 
@@ -80,7 +80,7 @@ A week at one apartment is one of those in-between steps.
 
 If one of you wants to move now and the other wants a couple of things in place first, look at those things together. Sometimes it comes down to one or two concrete items you can plan around. Sometimes it changes the plan itself, like choosing a new place together instead of one of you moving into the other's current apartment.
 
-Plans can slip. If the week at each other's place keeps getting pushed back, say so and pick a new date. When an item becomes true, mention it, because each one is progress you both get to see. And when the last things on both lists are done, or you carry the first box through the door, that's a high-five moment. Celebrate it however suits you, with an actual high five, a takeaway dinner on the floor, or a walk around your new neighbourhood.
+Plans can slip. If the week at each other's place keeps getting pushed back, bring that up and agree on a date you will both keep. When an item becomes true, mention it, because each one is progress you both get to see. And when the last things on both lists are done, or you carry the first box through the door, that's a high-five moment. Celebrate it however suits you, with an actual high five, a pizza while you unpack, or a walk around your new neighbourhood.
 
 ## Where do money, chores, and daily habits fit in?
 
